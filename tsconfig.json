@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "strict": true,
+    "module": "CommonJS",
+    "target": "es2015",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "declaration": true,
+    "lib": ["es2020.string", "dom"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}
