@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "netlify-lambda build src",
+    "build": "netlify-lambda build src && cp -r ./src/getRandomSentence/texts ./lambda/texts",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts"
   },
   "prettier": {
