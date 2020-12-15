@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  SendTweet:
+    Type: AWS::Lambda::Function
+    Properties:
+      Environment:
+        Variables:
+          FOO: 'BAR'
+      Handler: tweet.handler
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::435716529842:role/LambdaReadOnly
+
+  TweetEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      ScheduleExpression: cron(0 6 * * ? *)
+      State: 'ENABLED'
+      Targets:
+        - Arn:
+            Fn::GetAtt:
+              - 'SendTweet'
+              - 'Arn'
+          Id: 'TargetFunctionV1'
+
+  TweetPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName:
+        Ref: 'SendTweet'
+      Action: 'lambda:InvokeFunction'
+      Principal: 'events.amazonaws.com'
+      SourceArn:
+        Fn::GetAtt:
+          - 'TweetEvent'
+          - 'Arn'

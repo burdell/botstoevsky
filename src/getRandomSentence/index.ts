@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
 
-const directoryPath = path.resolve(__dirname, '../../texts')
+const directoryPath = path.resolve(__dirname, '../texts')
 
 export async function getRandomSentence() {
   const filename = await getRandomFile()
@@ -46,9 +46,10 @@ function getRandomInt(theNumber: number) {
 
 async function getFilenames(directory: string): Promise<string[]> {
   return new Promise((res, rej) => {
-    fs.readdir(directory, function (err, files) {
+    fs.readdir(directoryPath, function (err, files) {
       if (err) {
         rej('Unable to scan directory: ' + err)
+        console.log('=== err', err)
       }
       const fileNames: string[] = []
       files.forEach(function (file) {
