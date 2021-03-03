@@ -10,7 +10,9 @@ export async function sendTweet(status: string) {
     })
 
     client.post('statuses/update', { status }, function (error) {
-      if (error) throw rej(error)
+      if (error) {
+        console.log('ERRROR: ', error.message)
+      }
       res({ status: 'OK' })
     })
   })
