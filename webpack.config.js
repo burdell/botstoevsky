@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    tweet: './src/tweet/index.ts',
+    handler: './src/handler.ts',
   },
   resolve: {
     extensions: ['.mjs', '.js', '.ts'],
