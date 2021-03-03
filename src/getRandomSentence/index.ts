@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
 
-const directoryPath = path.resolve(__dirname, '../source_texts')
+const directoryPath = path.resolve(__dirname, '../texts')
 
 export async function getRandomSentence() {
   const filename = await getRandomFile()
