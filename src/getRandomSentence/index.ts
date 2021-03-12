@@ -15,18 +15,20 @@ export async function getRandomSentence() {
   return sentence.toLowerCase()
 }
 
-function getSentencesWithLength(sentences: string[], length: number = 280) {
+function getSentencesWithLength(sentences: string[], length = 280) {
   let sentence = ''
 
   const randomSentences = sentences.slice(getRandomInt(sentences.length - 1))
-  randomSentences.forEach((s) => {
+  for (let s of randomSentences) {
     const newLength = sentence.length + s.length
     if (!sentence.length) {
       sentence = s
     } else if (sentence.length < length && newLength < length) {
       sentence = `${sentence} ${s}`
+    } else {
+      break
     }
-  })
+  }
 
   return sentence
 }
@@ -62,7 +64,7 @@ async function getFilenames(directory: string): Promise<string[]> {
 
 async function getRandomLinesFromFile(
   filePath: string,
-  lineCount = 20
+  lineCount = 50
 ): Promise<string[]> {
   const p = new Promise<string[]>((res, rej) => {
     fs.readFile(filePath, function (err, data) {
@@ -71,7 +73,7 @@ async function getRandomLinesFromFile(
       const array = data
         .toString()
         .split('\n')
-        .filter((line) => !!line)
+        .filter((line) => !!line && line.length > 10)
 
       const lines = new Array(lineCount)
         .fill(undefined)
