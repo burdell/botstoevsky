@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-import { getRandomSentence } from './getRandomSentence'
+import { getRandomSentence } from './random'
 import { sendTweet } from './twitter'
 
 export async function handler() {

@@ -1,18 +1,31 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
+import Jimp from 'jimp'
 
-const directoryPath = path.resolve(__dirname, '../texts')
+import { backgroundConfig, defaultConfig } from '../instagram/backgroundConfig'
 
 export async function getRandomSentence() {
-  const filename = await getRandomFile()
-  const lines = await getRandomLinesFromFile(`${directoryPath}/${filename}`)
+  const pathToTexts = path.resolve(__dirname, '../texts')
+
+  const filename = await getRandomFilename(pathToTexts)
+  const lines = await getRandomLinesFromFile(`${pathToTexts}/${filename}`)
   const line = getRandomItem(lines)
   const sentence = getSentencesWithLength(
     tokenizer.sentences(line, { sanitize: true })
   )
 
   return sentence.toLowerCase()
+}
+
+export async function getRandomBackground() {
+  const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
+  const filename = 'field.jpg' //await getRandomFilename(pathToBackgrounds)
+
+  const config = backgroundConfig[filename] || defaultConfig
+  const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
+
+  return { image, config }
 }
 
 function getSentencesWithLength(sentences: string[], length = 280) {
@@ -33,7 +46,7 @@ function getSentencesWithLength(sentences: string[], length = 280) {
   return sentence
 }
 
-async function getRandomFile() {
+export async function getRandomFilename(directoryPath: string) {
   const textFilenames = await getFilenames(directoryPath)
   return getRandomItem(textFilenames)
 }
@@ -48,7 +61,7 @@ function getRandomInt(theNumber: number) {
 
 async function getFilenames(directory: string): Promise<string[]> {
   return new Promise((res, rej) => {
-    fs.readdir(directoryPath, function (err, files) {
+    fs.readdir(directory, function (err, files) {
       if (err) {
         rej('Unable to scan directory: ' + err)
         console.log('=== err', err)

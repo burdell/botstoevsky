@@ -8,12 +8,13 @@
   "scripts": {
     "build": "webpack && cp ./template.yml ./dist && cp -r ./src/texts ./dist",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts",
-    "sentence": "ts-node ./src/getRandomSentence/dev.ts",
+    "sentence": "ts-node ./src/random/dev.ts",
     "package-server": "aws cloudformation package --template-file ./dist/template.yml --output-template-file ./dist/serverless-output.yml --s3-bucket russian-lit-twitter",
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
     "deploy": "npm run build && npm run package-server && npm run deploy-server",
     "local": "ENV=local ts-node ./src/handler.ts",
-    "clean-file": "sed -i '' '/^$/d' "
+    "clean-file": "sed -i '' '/^$/d' ",
+    "instagram": "ts-node ./src/instagram"
   },
   "prettier": {
     "semi": false,
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "jimp": "^0.16.1",
     "sbd": "^1.0.18",
     "twitter": "^1.7.1"
   }
