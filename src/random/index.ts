@@ -85,7 +85,7 @@ async function getRandomLinesFromFile(
 
       const array = data
         .toString()
-        .split('\n')
+        .split('\.\n')
         .filter((line) => !!line && line.length > 10)
 
       const lines = new Array(lineCount)
