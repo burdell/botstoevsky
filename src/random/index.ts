@@ -33,7 +33,8 @@ function getSentencesWithLength(sentences: string[], length = 280) {
 
   const randomSentences = sentences.slice(getRandomInt(sentences.length - 1))
   for (let s of randomSentences) {
-    const newLength = sentence.length + s.length
+    const cleanedSentence = s.trim()
+    const newLength = sentence.length + cleanedSentence.length + 1
     if (!sentence.length) {
       sentence = s
     } else if (sentence.length < length && newLength < length) {
@@ -85,7 +86,7 @@ async function getRandomLinesFromFile(
 
       const array = data
         .toString()
-        .split('\.\n')
+        .split('.\n')
         .filter((line) => !!line && line.length > 10)
 
       const lines = new Array(lineCount)
