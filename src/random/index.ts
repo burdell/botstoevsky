@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
 import Jimp from 'jimp'
+import dedent from 'ts-dedent'
 
 import { backgroundConfig, defaultConfig } from '../instagram/backgroundConfig'
 
@@ -15,7 +16,7 @@ export async function getRandomSentence() {
     tokenizer.sentences(line, { sanitize: true })
   )
 
-  return sentence.toLowerCase()
+  return dedent(sentence.toLowerCase().replace(/\n/g, '').replace(/\s\s/g, ' '))
 }
 
 export async function getRandomBackground() {
