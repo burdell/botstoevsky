@@ -21,7 +21,7 @@ export async function getRandomSentence() {
 
 export async function getRandomBackground() {
   const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
-  const filename = 'field.jpg' //await getRandomFilename(pathToBackgrounds)
+  const filename = await getRandomFilename(pathToBackgrounds)
 
   const config = backgroundConfig[filename] || defaultConfig
   const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
