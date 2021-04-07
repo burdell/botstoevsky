@@ -13,6 +13,7 @@
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
     "deploy": "npm run build && npm run package-server && npm run deploy-server",
     "local": "ENV=local ts-node ./src/handler.ts",
+    "ig-local": "ENV=local ts-node ./src/instagram",
     "clean-file": "sed -i '' '/^$/d' ",
     "instagram": "ts-node ./src/instagram"
   },
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "instagram-private-api": "^1.44.0",
     "jimp": "^0.16.1",
     "sbd": "^1.0.18",
     "ts-dedent": "^2.1.1",

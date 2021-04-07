@@ -24,35 +24,43 @@ export const defaultConfig: BackgroundConfig = {
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
-  'field.jpg': {
+  'books.jpg': {
+    fontFile: fonts.white,
+    textPlacement: {
+      x: 145,
+      y: 345,
+    },
+    maxWidth: 375,
+  },
+  'camera.jpg': {
     fontFile: fonts.black,
     textPlacement: {
-      x: 150,
-      y: 45,
+      x: 145,
+      y: 60,
     },
-    maxWidth: 350,
+    maxWidth: 425,
+  },
+  'film.jpg': {
+    fontFile: fonts.black,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 250,
+  },
+  'handles.jpg': {
+    fontFile: fonts.white,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 250,
   },
   'meadow.jpg': {
     fontFile: fonts.black_large,
     textPlacement: {
-      x: 320,
+      x: 300,
       y: 180,
-    },
-    maxWidth: 400,
-  },
-  'path.jpg': {
-    fontFile: fonts.white_large,
-    textPlacement: {
-      x: 310,
-      y: 280,
-    },
-    maxWidth: 400,
-  },
-  'pumpkins.jpg': {
-    fontFile: fonts.black_large,
-    textPlacement: {
-      x: 175,
-      y: 200,
     },
     maxWidth: 400,
   },
@@ -64,6 +72,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 550,
   },
+  'television.jpg': {
+    fontFile: fonts.black,
+    textPlacement: {
+      x: 60,
+      y: 240,
+    },
+    maxWidth: 350,
+  },
   'trees2.jpg': {
     fontFile: fonts.black,
     textPlacement: {
@@ -71,13 +87,5 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 200,
     },
     maxWidth: 300,
-  },
-  'wood.jpg': {
-    fontFile: fonts.white_large,
-    textPlacement: {
-      x: 400,
-      y: 250,
-    },
-    maxWidth: 450,
   },
 }

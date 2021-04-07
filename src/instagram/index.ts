@@ -1,8 +1,10 @@
 import Jimp from 'jimp'
 import * as path from 'path'
+import { config } from 'dotenv'
 
 import { getRandomBackground, getRandomSentence } from '../random'
 import type { BackgroundConfig } from './backgroundConfig'
+import { uploadPhoto } from './uploadPhoto'
 
 async function writeTextOnFile(
   imageOptions: { image: Jimp; config: BackgroundConfig },
@@ -22,13 +24,29 @@ async function writeTextOnFile(
   })
 }
 
-async function main() {
+async function getImageBuffer(image: Jimp): Promise<Buffer> {
+  return new Promise((res, rej) => {
+    image.getBuffer(Jimp.MIME_JPEG, (err, buffer) => {
+      if (err) rej('Image buffer FAILED')
+      res(buffer)
+    })
+  })
+}
+
+export async function handler() {
   const text = await getRandomSentence()
   const imageOptions = await getRandomBackground()
 
   await writeTextOnFile(imageOptions, text)
-
-  imageOptions.image.write('./test.jpg')
+  const imageBuffer = await getImageBuffer(imageOptions.image)
+  try {
+    await uploadPhoto(imageBuffer, text)
+  } catch (e) {
+    console.error('ERROR: ', e.message)
+  }
 }
 
-main()
+if (process.env.ENV === 'local') {
+  config()
+  handler()
+}
