@@ -13,7 +13,7 @@ export async function handler() {
   }
 }
 
-export async function sendTweet(status: string) {
+async function sendTweet(status: string) {
   return new Promise((res, rej) => {
     const client = new Twitter({
       consumer_key: process.env.TWITTER_CONSUMER_KEY || '',

@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "types": ["node"],
     "declaration": true,
-    "lib": ["es2020.string", "dom"]
+    "lib": ["esnext", "dom"]
   },
   "exclude": ["node_modules"],
   "include": ["src"]

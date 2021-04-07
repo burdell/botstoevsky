@@ -1,3 +1,5 @@
+import { nawabiat, playfair, ruluko } from './font'
+
 export type BackgroundConfig = {
   fontFile: string
   textPlacement: {
@@ -7,84 +9,93 @@ export type BackgroundConfig = {
   maxWidth: number
 }
 
-const fonts = {
-  white: 'font_white.fnt',
-  black: 'font_black.fnt',
-  black_large: 'font_black_large.fnt',
-  white_large: 'font_white_large.fnt',
-}
-
 export const defaultConfig: BackgroundConfig = {
   textPlacement: {
     x: 100,
     y: 200,
   },
-  fontFile: fonts.white,
+  fontFile: nawabiat.white,
   maxWidth: 500,
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
+  'beach.jpg': {
+    fontFile: nawabiat.black,
+    textPlacement: {
+      x: 50,
+      y: 50,
+    },
+    maxWidth: 400,
+  },
   'books.jpg': {
-    fontFile: fonts.white,
+    fontFile: playfair.white,
     textPlacement: {
       x: 145,
-      y: 345,
+      y: 145,
     },
     maxWidth: 375,
   },
+  'books2.jpg': {
+    fontFile: playfair.white,
+    textPlacement: {
+      x: 185,
+      y: 20,
+    },
+    maxWidth: 425,
+  },
   'camera.jpg': {
-    fontFile: fonts.black,
+    fontFile: playfair.black,
     textPlacement: {
       x: 145,
-      y: 60,
+      y: 20,
+    },
+    maxWidth: 620,
+  },
+  'dart.jpg': {
+    fontFile: ruluko.white,
+    textPlacement: {
+      x: 300,
+      y: 20,
     },
     maxWidth: 425,
   },
   'film.jpg': {
-    fontFile: fonts.black,
+    fontFile: nawabiat.black,
     textPlacement: {
-      x: 20,
+      x: 650,
       y: 20,
     },
-    maxWidth: 250,
+    maxWidth: 270,
   },
-  'handles.jpg': {
-    fontFile: fonts.white,
+  'girl_coffee.jpg': {
+    fontFile: ruluko.white,
     textPlacement: {
       x: 20,
-      y: 20,
+      y: 75,
     },
-    maxWidth: 250,
+    maxWidth: 370,
   },
   'meadow.jpg': {
-    fontFile: fonts.black_large,
+    fontFile: nawabiat.black_large,
     textPlacement: {
-      x: 300,
+      x: 250,
       y: 180,
     },
     maxWidth: 400,
   },
-  'stream.jpg': {
-    fontFile: fonts.black_large,
-    textPlacement: {
-      x: 100,
-      y: 100,
-    },
-    maxWidth: 550,
-  },
   'television.jpg': {
-    fontFile: fonts.black,
+    fontFile: playfair.black,
     textPlacement: {
       x: 60,
-      y: 240,
+      y: 220,
     },
     maxWidth: 350,
   },
-  'trees2.jpg': {
-    fontFile: fonts.black,
+  'waterfall.jpg': {
+    fontFile: ruluko.white,
     textPlacement: {
-      x: 310,
-      y: 200,
+      x: 20,
+      y: 135,
     },
     maxWidth: 300,
   },

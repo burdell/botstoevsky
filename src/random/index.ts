@@ -16,12 +16,24 @@ export async function getRandomSentence() {
     tokenizer.sentences(line, { sanitize: true })
   )
 
-  return dedent(sentence.toLowerCase().replace(/\n/g, '').replace(/\s\s/g, ' '))
+  // "_Je haïs ces
+
+  return dedent(
+    sentence
+      .toLowerCase()
+      .replace(/\n/g, '')
+      .replace(/\s\s/g, ' ')
+      .replace(/“|”/g, '"')
+      .replace(/’|‘|’/g, "'")
+      .replace(/…/g, '...')
+      .replace(/—/g, ' - ')
+      .replace(/ï/g, 'i')
+  )
 }
 
 export async function getRandomBackground() {
   const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
-  const filename = await getRandomFilename(pathToBackgrounds)
+  const filename = 'waterfall.jpg' //await getRandomFilename(pathToBackgrounds)
 
   const config = backgroundConfig[filename] || defaultConfig
   const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)

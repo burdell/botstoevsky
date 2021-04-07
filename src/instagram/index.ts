@@ -9,7 +9,7 @@ import { uploadPhoto } from './uploadPhoto'
 export async function handler() {
   const imageResult = await generateRandomImage()
 
-  const imageBuffer = await getImageBuffer(imageResult.image)
+  const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
   await uploadPhoto(imageBuffer)
 }
 
@@ -23,7 +23,7 @@ export async function generateRandomImage() {
 
   await writeTextOnFile(imageOptions, text)
 
-  return imageOptions
+  return { imageOptions, text }
 }
 
 async function writeTextOnFile(
