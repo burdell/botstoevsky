@@ -7,13 +7,23 @@ import type { BackgroundConfig } from './backgroundConfig'
 import { uploadPhoto } from './uploadPhoto'
 
 export async function handler() {
-  const text = await getRandomSentence()
-  const imageOptions = await getRandomBackground()
+  const imageResult = await generateRandomImage()
+
+  const imageBuffer = await getImageBuffer(imageResult.image)
+  await uploadPhoto(imageBuffer)
+}
+
+export async function generateRandomImage() {
+  const imageOptionsPromise = getRandomBackground()
+  const textPromise = getRandomSentence()
+  const [imageOptions, text] = await Promise.all([
+    imageOptionsPromise,
+    textPromise,
+  ])
 
   await writeTextOnFile(imageOptions, text)
-  const imageBuffer = await getImageBuffer(imageOptions.image)
 
-  await uploadPhoto(imageBuffer)
+  return imageOptions
 }
 
 async function writeTextOnFile(

@@ -14,7 +14,8 @@
     "deploy": "npm run build && npm run package-server && npm run deploy-server",
     "twitter-local": "ENV=local ts-node ./src/twitter",
     "ig-local": "ENV=local ts-node ./src/instagram",
-    "clean-file": "sed -i '' '/^$/d' "
+    "clean-file": "sed -i '' '/^$/d' ",
+    "gen-image": "ts-node ./src/instagram/dev.ts"
   },
   "prettier": {
     "semi": false,
