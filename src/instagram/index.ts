@@ -13,7 +13,7 @@ export async function handler() {
   await writeTextOnFile(imageOptions, text)
   const imageBuffer = await getImageBuffer(imageOptions.image)
 
-  await uploadPhoto(imageBuffer, text)
+  await uploadPhoto(imageBuffer)
 }
 
 async function writeTextOnFile(

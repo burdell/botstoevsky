@@ -21,7 +21,7 @@ async function login() {
   return ig
 }
 
-export async function uploadPhoto(file: Buffer, caption: string) {
+export async function uploadPhoto(file: Buffer, caption?: string) {
   const client = await login()
   const publishResult = await client.publish.photo({
     file,
