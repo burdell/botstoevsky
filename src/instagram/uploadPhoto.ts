@@ -1,8 +1,4 @@
 import { IgApiClient } from 'instagram-private-api'
-import { readFile } from 'fs'
-import { promisify } from 'util'
-import { resolve } from 'path'
-const readFileAsync = promisify(readFile)
 
 function getCredentials() {
   const username = process.env.IG_USERNAME
@@ -27,10 +23,10 @@ async function login() {
 
 export async function uploadPhoto(file: Buffer, caption: string) {
   const client = await login()
-
   const publishResult = await client.publish.photo({
     file,
     caption,
   })
+
   return publishResult
 }

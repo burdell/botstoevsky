@@ -12,10 +12,9 @@
     "package-server": "aws cloudformation package --template-file ./dist/template.yml --output-template-file ./dist/serverless-output.yml --s3-bucket russian-lit-twitter",
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
     "deploy": "npm run build && npm run package-server && npm run deploy-server",
-    "local": "ENV=local ts-node ./src/handler.ts",
+    "twitter-local": "ENV=local ts-node ./src/twitter",
     "ig-local": "ENV=local ts-node ./src/instagram",
-    "clean-file": "sed -i '' '/^$/d' ",
-    "instagram": "ts-node ./src/instagram"
+    "clean-file": "sed -i '' '/^$/d' "
   },
   "prettier": {
     "semi": false,
@@ -26,6 +25,7 @@
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
     "@types/aws-lambda": "^8.10.66",
+    "@types/luxon": "^1.26.3",
     "@types/node": "^14.14.13",
     "@types/sbd": "^1.0.1",
     "@types/twitter": "^1.7.0",

@@ -10,7 +10,7 @@ Resources:
           TWITTER_CONSUMER_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_CONSUMER_SECRET}}'
           TWITTER_ACCESS_KEY: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_KEY}}'
           TWITTER_ACCESS_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_SECRET}}'
-      Handler: handler.handler
+      Handler: twitter.handler
       Runtime: nodejs12.x
       Role: arn:aws:iam::435716529842:role/LambdaReadOnly
 

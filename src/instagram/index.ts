@@ -6,6 +6,16 @@ import { getRandomBackground, getRandomSentence } from '../random'
 import type { BackgroundConfig } from './backgroundConfig'
 import { uploadPhoto } from './uploadPhoto'
 
+export async function handler() {
+  const text = await getRandomSentence()
+  const imageOptions = await getRandomBackground()
+
+  await writeTextOnFile(imageOptions, text)
+  const imageBuffer = await getImageBuffer(imageOptions.image)
+
+  await uploadPhoto(imageBuffer, text)
+}
+
 async function writeTextOnFile(
   imageOptions: { image: Jimp; config: BackgroundConfig },
   text: string
@@ -31,19 +41,6 @@ async function getImageBuffer(image: Jimp): Promise<Buffer> {
       res(buffer)
     })
   })
-}
-
-export async function handler() {
-  const text = await getRandomSentence()
-  const imageOptions = await getRandomBackground()
-
-  await writeTextOnFile(imageOptions, text)
-  const imageBuffer = await getImageBuffer(imageOptions.image)
-  try {
-    await uploadPhoto(imageBuffer, text)
-  } catch (e) {
-    console.error('ERROR: ', e.message)
-  }
 }
 
 if (process.env.ENV === 'local') {
