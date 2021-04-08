@@ -7,8 +7,23 @@ import type { BackgroundConfig } from './backgroundConfig'
 import { uploadPhoto } from './uploadPhoto'
 
 export async function handler() {
-  const imageResult = await generateRandomImage()
+  try {
+    await createImageAndPost()
+  } catch (e) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: e.message }),
+    }
+  }
 
+  return {
+    statusCode: 200,
+    body: JSON.stringify({}),
+  }
+}
+
+async function createImageAndPost() {
+  const imageResult = await generateRandomImage()
   const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
   await uploadPhoto(imageBuffer)
 }

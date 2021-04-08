@@ -4,6 +4,7 @@ module.exports = {
   mode: 'production',
   entry: {
     twitter: './src/twitter/index.ts',
+    instagram: './src/instagram/index.ts',
   },
   resolve: {
     extensions: ['.mjs', '.js', '.ts'],
@@ -17,6 +18,10 @@ module.exports = {
           options: { configFileName: 'tsconfig.json' },
         },
         exclude: /node_modules/,
+      },
+      {
+        test: /re2$/i,
+        use: 'raw-loader',
       },
     ],
   },

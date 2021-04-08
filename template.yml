@@ -37,3 +37,39 @@ Resources:
         Fn::GetAtt:
           - 'TweetEvent'
           - 'Arn'
+
+  PostToInstagram:
+    Type: AWS::Lambda::Function
+    Properties:
+      Environment:
+        Variables:
+          IG_USERNAME: '{{resolve:secretsmanager:InstagramCreds:SecretString:IG_USERNAME}}'
+          IG_PASSWORD: '{{resolve:secretsmanager:InstagramCreds:SecretString:IG_PASSWORD}}'
+      Handler: instagram.handler
+      Runtime: nodejs12.x
+      Timeout: 60
+      Role: arn:aws:iam::435716529842:role/LambdaReadOnly
+
+  InstagramEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      ScheduleExpression: cron(0 14 * * ? *)
+      State: 'ENABLED'
+      Targets:
+        - Arn:
+            Fn::GetAtt:
+              - 'PostToInstagram'
+              - 'Arn'
+          Id: 'TargetFunctionV1'
+
+  InstagramPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName:
+        Ref: 'PostToInstagram'
+      Action: 'lambda:InvokeFunction'
+      Principal: 'events.amazonaws.com'
+      SourceArn:
+        Fn::GetAtt:
+          - 'InstagramEvent'
+          - 'Arn'
