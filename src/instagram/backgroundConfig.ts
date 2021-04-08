@@ -136,7 +136,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     fontFile: fonts.ruluko.white,
     textPlacement: {
       x: 20,
-      y: 135,
+      y: 230,
     },
     maxWidth: 300,
   },
