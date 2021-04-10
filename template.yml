@@ -17,7 +17,7 @@ Resources:
   TweetEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 0/6 * * ? *)
+      ScheduleExpression: cron(0 0/4 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:
@@ -53,7 +53,7 @@ Resources:
   InstagramEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 14 * * ? *)
+      ScheduleExpression: cron(0 0/3 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:
