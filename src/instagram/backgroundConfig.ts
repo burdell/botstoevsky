@@ -20,12 +20,12 @@ export const defaultConfig: BackgroundConfig = {
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
   'bass.jpg': {
-    fontFile: fonts.jost.white18,
+    fontFile: fonts.jost.white22,
     textPlacement: {
-      x: 20,
-      y: 50,
+      x: 610,
+      y: 20,
     },
-    maxWidth: 200,
+    maxWidth: 320,
   },
   'bonfire.jpg': {
     fontFile: fonts.ruluko.white,

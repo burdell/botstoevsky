@@ -16,18 +16,22 @@ export async function getRandomSentence() {
     tokenizer.sentences(line, { sanitize: true })
   )
 
-  return dedent(sentence.toLowerCase().replace(/\n/g, '').replace(/\s\s/g, ' '))
+  return sentence
 }
 
-function removeNastyCharacters(sentence: string) {
-  return sentence
-    .trim()
-    .replace(/“|”/g, '"')
-    .replace(/’|‘|’/g, "'")
-    .replace(/…/g, '...')
-    .replace(/—/g, ' - ')
-    .replace(/ï/g, 'i')
-    .replace(/ü/g, 'u')
+function cleanSentence(sentence: string) {
+  return dedent(
+    sentence
+      .trim()
+      .replace(/\n/g, '')
+      .replace(/\s\s/g, ' ')
+      .replace(/“|”/g, '"')
+      .replace(/’|‘|’/g, "'")
+      .replace(/…/g, '...')
+      .replace(/—/g, ' - ')
+      .replace(/ï/g, 'i')
+      .replace(/ü/g, 'u')
+  )
 }
 
 function getSentencesWithLength(sentences: string[], length = 280) {
@@ -35,12 +39,12 @@ function getSentencesWithLength(sentences: string[], length = 280) {
 
   const randomSentences = sentences.slice(getRandomInt(sentences.length - 1))
   for (let s of randomSentences) {
-    const cleanedSentence = removeNastyCharacters(s)
+    const cleanedSentence = cleanSentence(s)
     const newLength = sentence.length + cleanedSentence.length + 1
     if (!sentence.length) {
-      sentence = s
+      sentence = cleanedSentence
     } else if (sentence.length < length && newLength < length) {
-      sentence = `${sentence} ${s}`
+      sentence = `${sentence} ${cleanedSentence}`
     } else {
       break
     }
