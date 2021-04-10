@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack && cp ./template.yml ./dist && cp -r ./src/texts ./dist && cp -r ./src/instagram/backgrounds ./dist/instagram && cp -r ./src/instagram/font/fontFiles ./dist/instagram/font",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts",
-    "sentence": "ts-node ./src/random/dev.ts",
+    "sentence": "ENV=local ts-node ./src/getRandomSentence.ts",
     "package-server": "aws cloudformation package --template-file ./dist/template.yml --output-template-file ./dist/serverless-output.yml --s3-bucket russian-lit-twitter",
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
     "deploy": "npm run build && npm run package-server && npm run deploy-server",

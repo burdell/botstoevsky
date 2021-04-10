@@ -1,13 +1,13 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
-import Jimp from 'jimp'
 import dedent from 'ts-dedent'
+import { config } from 'dotenv'
 
-import { backgroundConfig, defaultConfig } from '../instagram/backgroundConfig'
+import { getRandomFilename, getRandomInt, getRandomItem } from './random'
 
 export async function getRandomSentence() {
-  const pathToTexts = path.resolve(__dirname, '../texts')
+  const pathToTexts = path.resolve(__dirname, './texts')
 
   const filename = await getRandomFilename(pathToTexts)
   const lines = await getRandomLinesFromFile(`${pathToTexts}/${filename}`)
@@ -30,16 +30,6 @@ export async function getRandomSentence() {
   )
 }
 
-export async function getRandomBackground() {
-  const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
-  const filename = await getRandomFilename(pathToBackgrounds)
-
-  const config = backgroundConfig[filename] || defaultConfig
-  const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
-
-  return { image, config }
-}
-
 function getSentencesWithLength(sentences: string[], length = 280) {
   let sentence = ''
 
@@ -57,35 +47,6 @@ function getSentencesWithLength(sentences: string[], length = 280) {
   }
 
   return sentence
-}
-
-export async function getRandomFilename(directoryPath: string) {
-  const textFilenames = await getFilenames(directoryPath)
-  return getRandomItem(textFilenames)
-}
-
-function getRandomItem<T>(items: T[]) {
-  return items[getRandomInt(items.length)]
-}
-
-function getRandomInt(theNumber: number) {
-  return Math.floor(Math.random() * theNumber)
-}
-
-async function getFilenames(directory: string): Promise<string[]> {
-  return new Promise((res, rej) => {
-    fs.readdir(directory, function (err, files) {
-      if (err) {
-        rej('Unable to scan directory: ' + err)
-        console.log('=== err', err)
-      }
-      const fileNames: string[] = []
-      files.forEach(function (file) {
-        fileNames.push(file)
-      })
-      res(fileNames)
-    })
-  })
 }
 
 async function getRandomLinesFromFile(
@@ -110,4 +71,12 @@ async function getRandomLinesFromFile(
   })
 
   return p
+}
+
+async function dev() {
+  const sentence = await getRandomSentence()
+  console.log(sentence)
+}
+if (process.env.ENV === 'local') {
+  dev()
 }

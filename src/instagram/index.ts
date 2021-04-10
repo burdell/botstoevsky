@@ -2,9 +2,11 @@ import Jimp from 'jimp'
 import * as path from 'path'
 import { config } from 'dotenv'
 
-import { getRandomBackground, getRandomSentence } from '../random'
+import { getRandomSentence } from '../getRandomSentence'
+import { getRandomFilename } from '../random'
 import type { BackgroundConfig } from './backgroundConfig'
 import { uploadPhoto } from './uploadPhoto'
+import { backgroundConfig, defaultConfig } from '../instagram/backgroundConfig'
 
 export async function handler() {
   try {
@@ -39,6 +41,16 @@ export async function generateRandomImage() {
   await writeTextOnFile(imageOptions, text)
 
   return { imageOptions, text }
+}
+
+async function getRandomBackground() {
+  const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
+  const filename = await getRandomFilename(pathToBackgrounds)
+
+  const config = backgroundConfig[filename] || defaultConfig
+  const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
+
+  return { image, config }
 }
 
 async function writeTextOnFile(
