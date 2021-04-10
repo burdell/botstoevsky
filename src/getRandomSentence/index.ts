@@ -2,12 +2,11 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as tokenizer from 'sbd'
 import dedent from 'ts-dedent'
-import { config } from 'dotenv'
 
-import { getRandomFilename, getRandomInt, getRandomItem } from './random'
+import { getRandomFilename, getRandomInt, getRandomItem } from '../random'
 
 export async function getRandomSentence() {
-  const pathToTexts = path.resolve(__dirname, './texts')
+  const pathToTexts = path.resolve(__dirname, '../texts')
 
   const filename = await getRandomFilename(pathToTexts)
   const lines = await getRandomLinesFromFile(`${pathToTexts}/${filename}`)
@@ -75,12 +74,4 @@ async function getRandomLinesFromFile(
   })
 
   return p
-}
-
-async function dev() {
-  const sentence = await getRandomSentence()
-  console.log(sentence)
-}
-if (process.env.ENV === 'local') {
-  dev()
 }

@@ -1,6 +1,5 @@
 import Jimp from 'jimp'
 import * as path from 'path'
-import { config } from 'dotenv'
 
 import { getRandomSentence } from '../getRandomSentence'
 import { getRandomFilename } from '../random'
@@ -30,8 +29,8 @@ async function createImageAndPost() {
   await uploadPhoto(imageBuffer)
 }
 
-export async function generateRandomImage() {
-  const imageOptionsPromise = getRandomBackground()
+export async function generateRandomImage(backgroundToUse?: string) {
+  const imageOptionsPromise = getBackground(backgroundToUse)
   const textPromise = getRandomSentence()
   const [imageOptions, text] = await Promise.all([
     imageOptionsPromise,
@@ -43,9 +42,10 @@ export async function generateRandomImage() {
   return { imageOptions, text }
 }
 
-async function getRandomBackground() {
+async function getBackground(backgroundToUse?: string) {
   const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
-  const filename = await getRandomFilename(pathToBackgrounds)
+  const filename =
+    backgroundToUse || (await getRandomFilename(pathToBackgrounds))
 
   const config = backgroundConfig[filename] || defaultConfig
   const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
@@ -78,9 +78,4 @@ async function getImageBuffer(image: Jimp): Promise<Buffer> {
       res(buffer)
     })
   })
-}
-
-if (process.env.ENV === 'local') {
-  config()
-  handler()
 }

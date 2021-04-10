@@ -1,4 +1,3 @@
-import { config } from 'dotenv'
 import Twitter from 'twitter'
 
 import { getRandomSentence } from '../getRandomSentence'
@@ -29,9 +28,4 @@ async function sendTweet(status: string) {
       res({ status: 'OK' })
     })
   })
-}
-
-if (process.env.ENV === 'local') {
-  config()
-  handler()
 }
