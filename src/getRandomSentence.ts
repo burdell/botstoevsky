@@ -16,18 +16,18 @@ export async function getRandomSentence() {
     tokenizer.sentences(line, { sanitize: true })
   )
 
-  return dedent(
-    sentence
-      .toLowerCase()
-      .replace(/\n/g, '')
-      .replace(/\s\s/g, ' ')
-      .replace(/“|”/g, '"')
-      .replace(/’|‘|’/g, "'")
-      .replace(/…/g, '...')
-      .replace(/—/g, ' - ')
-      .replace(/ï/g, 'i')
-      .replace(/ü/g, 'u')
-  )
+  return dedent(sentence.toLowerCase().replace(/\n/g, '').replace(/\s\s/g, ' '))
+}
+
+function removeNastyCharacters(sentence: string) {
+  return sentence
+    .trim()
+    .replace(/“|”/g, '"')
+    .replace(/’|‘|’/g, "'")
+    .replace(/…/g, '...')
+    .replace(/—/g, ' - ')
+    .replace(/ï/g, 'i')
+    .replace(/ü/g, 'u')
 }
 
 function getSentencesWithLength(sentences: string[], length = 280) {
@@ -35,7 +35,7 @@ function getSentencesWithLength(sentences: string[], length = 280) {
 
   const randomSentences = sentences.slice(getRandomInt(sentences.length - 1))
   for (let s of randomSentences) {
-    const cleanedSentence = s.trim()
+    const cleanedSentence = removeNastyCharacters(s)
     const newLength = sentence.length + cleanedSentence.length + 1
     if (!sentence.length) {
       sentence = s
