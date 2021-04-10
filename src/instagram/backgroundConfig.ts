@@ -19,13 +19,13 @@ export const defaultConfig: BackgroundConfig = {
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
-  'beach.jpg': {
-    fontFile: fonts.nawabiat.black,
+  'bass.jpg': {
+    fontFile: fonts.jost.white18,
     textPlacement: {
-      x: 50,
+      x: 20,
       y: 50,
     },
-    maxWidth: 400,
+    maxWidth: 200,
   },
   'bonfire.jpg': {
     fontFile: fonts.ruluko.white,
@@ -51,15 +51,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 700,
   },
-  'cocktail.jpg': {
-    fontFile: fonts.jost.white,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 425,
-  },
-
   'camera.jpg': {
     fontFile: fonts.jost.black,
     textPlacement: {
@@ -68,13 +59,21 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 620,
   },
-  'dart.jpg': {
-    fontFile: fonts.ruluko.white,
+  'cocktail.jpg': {
+    fontFile: fonts.jost.white,
     textPlacement: {
-      x: 300,
+      x: 20,
       y: 20,
     },
     maxWidth: 425,
+  },
+  'duck.jpg': {
+    fontFile: fonts.nawabiat.white,
+    textPlacement: {
+      x: 30,
+      y: 430,
+    },
+    maxWidth: 720,
   },
   'film.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -83,6 +82,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 270,
+  },
+  'frozen_drank.jpg': {
+    fontFile: fonts.ruluko.black,
+    textPlacement: {
+      x: 600,
+      y: 20,
+    },
+    maxWidth: 320,
   },
   'girl_coffee.jpg': {
     fontFile: fonts.ruluko.white,
@@ -108,27 +115,19 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
-  'rain.jpg': {
-    fontFile: fonts.jost.black,
+  'reststop.jpg': {
+    fontFile: fonts.jost.black24,
     textPlacement: {
-      x: 370,
-      y: 80,
+      x: 500,
+      y: 20,
     },
-    maxWidth: 400,
+    maxWidth: 370,
   },
   'television.jpg': {
     fontFile: fonts.playfair.black,
     textPlacement: {
       x: 60,
       y: 220,
-    },
-    maxWidth: 350,
-  },
-  'typewriter.jpg': {
-    fontFile: fonts.jost.white18,
-    textPlacement: {
-      x: 20,
-      y: 300,
     },
     maxWidth: 350,
   },

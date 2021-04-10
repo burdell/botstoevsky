@@ -24,4 +24,6 @@ export const jost = {
   yellow: 'fontFiles/jost/yellow.fnt',
   yellow24: 'fontFiles/jost/yellow-24.fnt',
   white18: 'fontFiles/jost/white-18.fnt',
+  black18: 'fontFiles/jost/black-18.fnt',
+  black24: 'fontFiles/jost/black-24.fnt',
 }
