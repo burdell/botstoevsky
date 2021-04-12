@@ -35,6 +35,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 425,
   },
+  'bike.jpg': {
+    fontFile: fonts.ruluko.white,
+    textPlacement: {
+      x: 20,
+      y: 370,
+    },
+    maxWidth: 425,
+  },
   'books.jpg': {
     fontFile: fonts.playfair.white28,
     textPlacement: {
@@ -67,6 +75,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 425,
   },
+  'computer.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 450,
+      y: 450,
+    },
+    maxWidth: 550,
+  },
+  'coffee.jpg': {
+    fontFile: fonts.playfair.white,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 750,
+  },
   'duck.jpg': {
     fontFile: fonts.nawabiat.white,
     textPlacement: {
@@ -88,6 +112,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     textPlacement: {
       x: 600,
       y: 20,
+    },
+    maxWidth: 320,
+  },
+  'fruit.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 20,
+      y: 300,
     },
     maxWidth: 320,
   },
@@ -115,11 +147,27 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
+  'plane.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 550,
+      y: 40,
+    },
+    maxWidth: 350,
+  },
   'reststop.jpg': {
     fontFile: fonts.jost.black24,
     textPlacement: {
       x: 500,
       y: 20,
+    },
+    maxWidth: 370,
+  },
+  'skateboard.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 20,
+      y: 400,
     },
     maxWidth: 370,
   },

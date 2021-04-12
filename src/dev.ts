@@ -21,7 +21,9 @@ const thingsToDo = {
     }
 
     const imageResult = await generateRandomImage(fileName)
-    imageResult.imageOptions.image.write(resolve(__dirname, './result.jpg'))
+    imageResult.imageOptions.image.write(
+      resolve(__dirname, './instagram/result.jpg')
+    )
   },
   sendToTwitter: async () => {
     await twitterHandler()

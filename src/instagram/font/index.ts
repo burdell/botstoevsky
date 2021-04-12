@@ -28,3 +28,10 @@ export const jost = {
   black24: 'fontFiles/jost/black-24.fnt',
   white22: 'fontFiles/jost/white-22.fnt',
 }
+
+export const montserrat = {
+  black20: 'fontFiles/montserrat/black20.fnt',
+  white20: 'fontFiles/montserrat/white20.fnt',
+  black24: 'fontFiles/montserrat/black24.fnt',
+  white24: 'fontFiles/montserrat/white24.fnt',
+}
