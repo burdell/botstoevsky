@@ -43,6 +43,7 @@
     "dotenv": "^8.2.0",
     "instagram-private-api": "^1.44.0",
     "jimp": "^0.16.1",
+    "random": "^3.0.3",
     "sbd": "^1.0.18",
     "ts-dedent": "^2.1.1",
     "twitter": "^1.7.1"

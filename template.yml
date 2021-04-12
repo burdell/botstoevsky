@@ -17,7 +17,7 @@ Resources:
   TweetEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 0/4 * * ? *)
+      ScheduleExpression: cron(0 0/6 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:

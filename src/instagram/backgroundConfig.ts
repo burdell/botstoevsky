@@ -171,14 +171,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 370,
   },
-  'television.jpg': {
-    fontFile: fonts.playfair.black,
-    textPlacement: {
-      x: 60,
-      y: 220,
-    },
-    maxWidth: 350,
-  },
   'waterfall.jpg': {
     fontFile: fonts.ruluko.white,
     textPlacement: {

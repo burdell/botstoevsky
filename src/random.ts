@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import random from 'random'
 
 export async function getRandomFilename(directoryPath: string) {
   const textFilenames = await getFilenames(directoryPath)
@@ -10,7 +11,7 @@ export function getRandomItem<T>(items: T[]) {
 }
 
 export function getRandomInt(theNumber: number) {
-  return Math.floor(Math.random() * theNumber)
+  return random.uniformInt(0, theNumber - 1)()
 }
 
 async function getFilenames(directory: string): Promise<string[]> {
