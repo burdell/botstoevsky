@@ -7,7 +7,7 @@ module.exports = {
     instagram: './src/instagram/index.ts',
   },
   resolve: {
-    extensions: ['.mjs', '.js', '.ts'],
+    extensions: ['.js', '.ts'],
   },
   module: {
     rules: [

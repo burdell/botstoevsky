@@ -40,10 +40,11 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
+    "@types/random": "^2.1.1",
     "dotenv": "^8.2.0",
     "instagram-private-api": "^1.44.0",
     "jimp": "^0.16.1",
-    "random": "^3.0.3",
+    "random": "^2.2.0",
     "sbd": "^1.0.18",
     "ts-dedent": "^2.1.1",
     "twitter": "^1.7.1"
