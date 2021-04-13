@@ -10,6 +10,7 @@ export const playfair = {
   white: 'fontFiles/playfair/white.fnt',
   white28: 'fontFiles/playfair/white-28.fnt',
   yellow: 'fontFiles/playfair/yellow.fnt',
+  black20: 'fontFiles/playfair/black20.fnt',
 }
 
 export const ruluko = {
