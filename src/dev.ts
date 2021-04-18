@@ -12,7 +12,8 @@ import { handler as instagramHandler } from './instagram'
 const thingsToDo = {
   sentence: async function () {
     const sentence = await getRandomSentence()
-    console.log(sentence)
+    console.log('=== From: ', sentence.meta?.title)
+    console.log(sentence.sentence)
   },
   genImage: async function () {
     let fileName = argv[3] || undefined

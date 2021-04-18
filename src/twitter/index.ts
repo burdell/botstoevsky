@@ -3,7 +3,7 @@ import Twitter from 'twitter'
 import { getRandomSentence } from '../getRandomSentence'
 
 export async function handler() {
-  const sentence = await getRandomSentence()
+  const { sentence } = await getRandomSentence()
   await sendTweet(sentence)
 
   return {

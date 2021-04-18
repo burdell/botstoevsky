@@ -1,5 +1,7 @@
 import { IgApiClient } from 'instagram-private-api'
 
+import { TextMetadata } from '../getRandomSentence/meta'
+
 function getCredentials() {
   const username = process.env.IG_USERNAME
   const password = process.env.IG_PASSWORD
@@ -21,12 +23,18 @@ async function login() {
   return ig
 }
 
-export async function uploadPhoto(file: Buffer, caption?: string) {
+export async function uploadPhoto(file: Buffer, metadata: TextMetadata) {
   const client = await login()
   const publishResult = await client.publish.photo({
     file,
-    caption,
+    caption: generateCaption(metadata),
   })
 
   return publishResult
+}
+
+function generateCaption(metadata: TextMetadata) {
+  if (!metadata) return undefined
+
+  return `[${metadata.title}]`
 }

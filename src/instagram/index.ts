@@ -26,7 +26,7 @@ export async function handler() {
 async function createImageAndPost() {
   const imageResult = await generateRandomImage()
   const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
-  await uploadPhoto(imageBuffer)
+  await uploadPhoto(imageBuffer, imageResult.text.meta)
 }
 
 export async function generateRandomImage(backgroundToUse?: string) {
@@ -37,7 +37,8 @@ export async function generateRandomImage(backgroundToUse?: string) {
     textPromise,
   ])
 
-  await writeTextOnFile(imageOptions, text)
+  const { sentence } = text
+  await writeTextOnFile(imageOptions, sentence)
 
   return { imageOptions, text }
 }
