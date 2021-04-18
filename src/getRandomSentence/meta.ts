@@ -32,16 +32,19 @@ export const textMetadata: { [filename: string]: TextMetadata } = {
   'poor_folk.txt': {
     title: 'Poor Folk',
   },
+  'the_adolescent.txt': {
+    title: 'The Adolescent',
+  },
   'the_gambler.txt': {
     title: 'The Gambler',
+  },
+  the_double: {
+    title: 'The Double',
   },
   'the_idiot.txt': {
     title: 'The Idiot',
   },
   'uncles_dream.txt': {
     title: `Uncle's Dream`,
-  },
-  'white_nights.txt': {
-    title: 'White Nights',
   },
 }
