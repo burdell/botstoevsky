@@ -11,7 +11,12 @@ import { handler as instagramHandler } from './instagram'
 
 const thingsToDo = {
   sentence: async function () {
-    const sentence = await getRandomSentence()
+    let fileName = argv[3] || undefined
+    if (fileName) {
+      fileName = `${fileName}.txt`
+    }
+
+    const sentence = await getRandomSentence(fileName)
     console.log('=== From: ', sentence.meta?.title)
     console.log(sentence.sentence)
   },

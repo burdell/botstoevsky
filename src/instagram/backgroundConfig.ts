@@ -252,7 +252,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 350,
   },
   'skateboard.jpg': {
-    fontFile: fonts.montserrat.black24,
+    fontFile: fonts.jost.black24,
     textPlacement: {
       x: 20,
       y: 400,

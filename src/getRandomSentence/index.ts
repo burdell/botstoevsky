@@ -4,12 +4,12 @@ import * as tokenizer from 'sbd'
 import dedent from 'ts-dedent'
 
 import { getRandomFilename, getRandomInt, getRandomItem } from '../random'
-import { textMetadata, TextMetadata } from './meta'
+import { textMetadata } from './meta'
 
-export async function getRandomSentence() {
+export async function getRandomSentence(desiredFilename?: string) {
   const pathToTexts = path.resolve(__dirname, '../texts')
 
-  const filename = await getRandomFilename(pathToTexts)
+  const filename = desiredFilename || (await getRandomFilename(pathToTexts))
   const lines = await getRandomLinesFromFile(`${pathToTexts}/${filename}`)
   const line = getRandomItem(lines)
   const sentence = getSentencesWithLength(
