@@ -19,14 +19,6 @@ export const defaultConfig: BackgroundConfig = {
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
-  'bass.jpg': {
-    fontFile: fonts.jost.white22,
-    textPlacement: {
-      x: 610,
-      y: 20,
-    },
-    maxWidth: 320,
-  },
   'banner.jpg': {
     fontFile: fonts.ruluko.black,
     textPlacement: {
@@ -34,6 +26,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 475,
+  },
+  'beagle.jpg': {
+    fontFile: fonts.nawabiat.black_large,
+    textPlacement: {
+      x: 50,
+      y: 50,
+    },
+    maxWidth: 600,
+  },
+  'bass.jpg': {
+    fontFile: fonts.jost.white22,
+    textPlacement: {
+      x: 610,
+      y: 20,
+    },
+    maxWidth: 320,
   },
   'bonfire.jpg': {
     fontFile: fonts.ruluko.white,
@@ -50,6 +58,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 400,
     },
     maxWidth: 320,
+  },
+  'beer2.jpg': {
+    fontFile: fonts.playfair.white28,
+    textPlacement: {
+      x: 700,
+      y: 600,
+    },
+    maxWidth: 450,
   },
   'bike.jpg': {
     fontFile: fonts.ruluko.white,
@@ -107,13 +123,13 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 600,
   },
-  'coffeeshop.jpg': {
-    fontFile: fonts.jost.black24,
+  'coffee.jpg': {
+    fontFile: fonts.ruluko.black,
     textPlacement: {
-      x: 500,
-      y: 20,
+      x: 50,
+      y: 50,
     },
-    maxWidth: 400,
+    maxWidth: 450,
   },
   'couple.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -122,14 +138,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 400,
-  },
-  'coffee.jpg': {
-    fontFile: fonts.playfair.white,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 750,
   },
   'film.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -146,6 +154,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 550,
+  },
+  'flower.jpg': {
+    fontFile: fonts.playfair.black20,
+    textPlacement: {
+      x: 20,
+      y: 450,
+    },
+    maxWidth: 400,
   },
   'frozen_drank.jpg': {
     fontFile: fonts.ruluko.black,
@@ -209,6 +225,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       x: 20,
       y: 20,
     },
+    maxWidth: 400,
+  },
+  'park.jpg': {
+    fontFile: fonts.ruluko.white,
+    textPlacement: {
+      x: 650,
+      y: 600,
+    },
     maxWidth: 600,
   },
   'pier.jpg': {
@@ -267,6 +291,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 500,
   },
+  'swing.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 900,
+      y: 30,
+    },
+    maxWidth: 420,
+  },
   'train_lounge.jpg': {
     fontFile: fonts.jost.yellow24,
     textPlacement: {
@@ -297,15 +329,15 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       x: 20,
       y: 80,
     },
-    maxWidth: 300,
+    maxWidth: 290,
   },
   'wedding.jpg': {
     fontFile: fonts.playfair.black20,
     textPlacement: {
-      x: 20,
-      y: 90,
+      x: 70,
+      y: 110,
     },
-    maxWidth: 450,
+    maxWidth: 430,
   },
   'windy.jpg': {
     fontFile: fonts.nawabiat.black,
