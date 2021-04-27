@@ -15,7 +15,8 @@
     "gen-image": "ts-node ./src/dev.ts genImage",
     "sentence": "ts-node ./src/dev.ts sentence",
     "twitter": "ts-node ./src/dev.ts sendToTwitter",
-    "instagram": "ts-node ./src/dev.ts sendToInstagram"
+    "instagram": "ts-node ./src/dev.ts sendToInstagram",
+    "dev": "ts-node ./src/dev.ts"
   },
   "prettier": {
     "semi": false,

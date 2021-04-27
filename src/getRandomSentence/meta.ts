@@ -18,10 +18,16 @@ export const textMetadata: { [filename: string]: TextMetadata } = {
     title: 'The Eternal Husband',
   },
   'grand_inquisitor.txt': {
-    title: 'The Brothers Karamazov',
+    title: 'The Grand Inquisitor',
   },
   'honest_thief.txt': {
     title: 'The Honest Thief',
+  },
+  'insulted.txt': {
+    title: 'Humiliated & Insulted',
+  },
+  'netochka.txt': {
+    title: 'Netochka Nezvanova',
   },
   'notes_from_a_dead_house.txt': {
     title: 'Notes from a Dead House',
@@ -46,5 +52,8 @@ export const textMetadata: { [filename: string]: TextMetadata } = {
   },
   'uncles_dream.txt': {
     title: `Uncle's Dream`,
+  },
+  'village.txt': {
+    title: 'The Village of Stepanchikovo',
   },
 }
