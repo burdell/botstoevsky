@@ -251,6 +251,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 500,
   },
+  'steppe.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 350,
+      y: 20,
+    },
+    maxWidth: 500,
+  },
   'swing.jpg': {
     fontFile: fonts.montserrat.black24,
     textPlacement: {
