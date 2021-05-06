@@ -1,5 +1,23 @@
 import * as fs from 'fs'
 import random from 'random'
+import seedrandom, { xor128 } from 'seedrandom'
+import { Random, nodeCrypto } from 'random-js'
+
+// function makeid(length: number) {
+//   var result = []
+//   var characters =
+//     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+//   var charactersLength = characters.length
+//   for (var i = 0; i < length; i++) {
+//     result.push(characters.charAt(Math.floor(Math.random() * charactersLength)))
+//   }
+//   return result.join('')
+// }
+
+// const rng = xor128(makeid(6400))
+// random.use(rng)
+
+const r = new Random(nodeCrypto)
 
 export async function getRandomFilename(directoryPath: string) {
   const textFilenames = await getFilenames(directoryPath)
@@ -11,7 +29,9 @@ export function getRandomItem<T>(items: T[]) {
 }
 
 export function getRandomInt(theNumber: number) {
-  return random.uniformInt(0, theNumber - 1)()
+  // return random.int(0, theNumber - 1)
+  // const r = new Random(nodeCrypto)
+  return r.integer(0, theNumber - 1)
 }
 
 async function getFilenames(directory: string): Promise<string[]> {

@@ -107,6 +107,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 430,
   },
+  'camping.jpg': {
+    fontFile: fonts.montserrat.white24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 430,
+  },
   'coffee.jpg': {
     fontFile: fonts.ruluko.black,
     textPlacement: {
@@ -211,6 +219,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 600,
   },
+  'plane2.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 500,
+  },
   'ponder_trees.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -258,6 +274,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 500,
+  },
+  'sunset_field.jpg': {
+    fontFile: fonts.playfair.black20,
+    textPlacement: {
+      x: 50,
+      y: 50,
+    },
+    maxWidth: 650,
   },
   'swing.jpg': {
     fontFile: fonts.montserrat.black24,
