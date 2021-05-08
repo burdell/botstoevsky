@@ -20,9 +20,6 @@ export const textMetadata: { [filename: string]: TextMetadata } = {
   'grand_inquisitor.txt': {
     title: 'The Grand Inquisitor',
   },
-  'honest_thief.txt': {
-    title: 'The Honest Thief',
-  },
   'insulted.txt': {
     title: 'Humiliated & Insulted',
   },

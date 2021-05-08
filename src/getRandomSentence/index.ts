@@ -60,7 +60,10 @@ async function getRandomLinesFromFile(
 ): Promise<string[]> {
   const p = new Promise<string[]>((res, rej) => {
     fs.readFile(filePath, function (err, data) {
-      if (err) throw rej(err)
+      if (err) {
+        rej(err)
+        return
+      }
 
       const array = data
         .toString()

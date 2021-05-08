@@ -16,6 +16,7 @@
     "sentence": "ts-node ./src/dev.ts sentence",
     "twitter": "ts-node ./src/dev.ts sendToTwitter",
     "instagram": "ts-node ./src/dev.ts sendToInstagram",
+    "profile": "ts-node ./src/dev.ts profile",
     "dev": "ts-node ./src/dev.ts"
   },
   "prettier": {

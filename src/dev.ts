@@ -40,15 +40,14 @@ const thingsToDo = {
   profile: async () => {
     const results: { [filename: string]: number } = {}
 
-    const promises = new Array(1000).fill(undefined).map(async () => {
+    const runCount = Number(argv[3]) || 1000
+    const promises = new Array(runCount).fill(undefined).map(async () => {
       const { meta } = await getRandomSentence()
       if (!meta) return
-
       if (!results[meta.title]) {
         results[meta.title] = 1
         return
       }
-
       results[meta.title] = results[meta.title] + 1
     })
 
