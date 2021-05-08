@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import random from 'random'
-import seedrandom, { xor4096 } from 'seedrandom'
-import { textMetadata } from './getRandomSentence/meta'
+import { tychei } from 'seedrandom'
+import { getRandomOrgInt } from './randomOrg'
 
 function makeid(length: number) {
   var result = []
@@ -16,15 +16,20 @@ function makeid(length: number) {
 
 export async function getRandomFilename(directoryPath: string) {
   const textFilenames = await getFilenames(directoryPath)
-  return getRandomItem(textFilenames)
+  return getRandomOrgItem(textFilenames)
 }
 
 export function getRandomItem<T>(items: T[]) {
   return items[getRandomInt(items.length)]
 }
 
+async function getRandomOrgItem<T>(items: T[]) {
+  const int = await getRandomOrgInt(items.length)
+  return items[int]
+}
+
 export function getRandomInt(theNumber: number) {
-  const rng = xor4096(makeid(2000))
+  const rng = tychei(makeid(200))
   random.use(rng)
   return random.int(0, theNumber - 1)
 }

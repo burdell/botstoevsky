@@ -37,33 +37,6 @@ const thingsToDo = {
   sendToInstagram: async () => {
     await instagramHandler()
   },
-  profile: async () => {
-    const results: { [filename: string]: number } = {}
-
-    const runCount = Number(argv[3]) || 1000
-    const promises = new Array(runCount).fill(undefined).map(async () => {
-      const { meta } = await getRandomSentence()
-      if (!meta) return
-      if (!results[meta.title]) {
-        results[meta.title] = 1
-        return
-      }
-      results[meta.title] = results[meta.title] + 1
-    })
-
-    await Promise.all(promises)
-
-    var sortable = []
-    for (var title in results) {
-      sortable.push([title, results[title]])
-    }
-
-    const sorted = sortable.sort(function (a, b) {
-      return (b[1] as number) - (a[1] as number)
-    })
-
-    console.log(sorted)
-  },
 }
 
 async function main() {

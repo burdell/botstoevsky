@@ -10,6 +10,7 @@ Resources:
           TWITTER_CONSUMER_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_CONSUMER_SECRET}}'
           TWITTER_ACCESS_KEY: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_KEY}}'
           TWITTER_ACCESS_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_SECRET}}'
+          RANDOM_ORG_KEY: '{{resolve:secretsmanager:OtherCreds:SecretString:RANDOM_ORG_KEY}}'
       Handler: twitter.handler
       Runtime: nodejs12.x
       Role: arn:aws:iam::435716529842:role/LambdaReadOnly
@@ -17,7 +18,7 @@ Resources:
   TweetEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 0 10,15/12 * * ?)
+      ScheduleExpression: cron(0 0/6 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:
@@ -45,6 +46,7 @@ Resources:
         Variables:
           IG_USERNAME: '{{resolve:secretsmanager:InstagramCreds:SecretString:IG_USERNAME}}'
           IG_PASSWORD: '{{resolve:secretsmanager:InstagramCreds:SecretString:IG_PASSWORD}}'
+          RANDOM_ORG_KEY: '{{resolve:secretsmanager:OtherCreds:SecretString:RANDOM_ORG_KEY}}'
       Handler: instagram.handler
       Runtime: nodejs12.x
       Timeout: 60
@@ -53,7 +55,7 @@ Resources:
   InstagramEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 0/12 * * ? *)
+      ScheduleExpression: cron(0 12,20 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:

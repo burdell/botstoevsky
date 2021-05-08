@@ -12,12 +12,12 @@
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
     "deploy": "npm run build && npm run package-server && npm run deploy-server",
     "clean-file": "sed -i '' '/^$/d' ",
-    "gen-image": "ts-node ./src/dev.ts genImage",
-    "sentence": "ts-node ./src/dev.ts sentence",
-    "twitter": "ts-node ./src/dev.ts sendToTwitter",
-    "instagram": "ts-node ./src/dev.ts sendToInstagram",
-    "profile": "ts-node ./src/dev.ts profile",
-    "dev": "ts-node ./src/dev.ts"
+    "gen-image": "ts-node --files ./src/dev.ts genImage",
+    "sentence": "ts-node --files ./src/dev.ts sentence",
+    "twitter": "ts-node --files ./src/dev.ts sendToTwitter",
+    "instagram": "ts-node --files ./src/dev.ts sendToInstagram",
+    "profile": "ts-node --files ./src/dev.ts profile",
+    "dev": "ts-node --files ./src/dev.ts"
   },
   "prettier": {
     "semi": false,
@@ -49,6 +49,7 @@
     "jimp": "^0.16.1",
     "random": "^2.2.0",
     "random-js": "^2.1.0",
+    "random-org": "^2.1.1",
     "sbd": "^1.0.18",
     "seedrandom": "^3.0.5",
     "ts-dedent": "^2.1.1",
