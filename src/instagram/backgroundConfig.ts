@@ -19,6 +19,14 @@ export const defaultConfig: BackgroundConfig = {
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
+  'balloon.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 80,
+      y: 300,
+    },
+    maxWidth: 400,
+  },
   'banner.jpg': {
     fontFile: fonts.ruluko.black,
     textPlacement: {
@@ -30,58 +38,58 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'bass.jpg': {
     fontFile: fonts.jost.white22,
     textPlacement: {
-      x: 610,
+      x: 630,
       y: 20,
     },
-    maxWidth: 320,
+    maxWidth: 300,
   },
-  'beagle.jpg': {
-    fontFile: fonts.nawabiat.black_large,
-    textPlacement: {
-      x: 50,
-      y: 50,
-    },
-    maxWidth: 600,
-  },
-  'beer.jpg': {
-    fontFile: fonts.playfair.black20,
-    textPlacement: {
-      x: 650,
-      y: 400,
-    },
-    maxWidth: 320,
-  },
-  'bike.jpg': {
-    fontFile: fonts.ruluko.white,
-    textPlacement: {
-      x: 20,
-      y: 370,
-    },
-    maxWidth: 375,
-  },
-  'bonfire.jpg': {
-    fontFile: fonts.ruluko.white,
-    textPlacement: {
-      x: 450,
-      y: 150,
-    },
-    maxWidth: 425,
-  },
-  'books.jpg': {
-    fontFile: fonts.playfair.white28,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 475,
-  },
-  'bulb.jpg': {
-    fontFile: fonts.ruluko.white,
+  'beach_hoodie.jpg': {
+    fontFile: fonts.nawabiat.black,
     textPlacement: {
       x: 30,
-      y: 500,
+      y: 30,
     },
-    maxWidth: 700,
+    maxWidth: 400,
+  },
+  'beach.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 575,
+      y: 30,
+    },
+    maxWidth: 300,
+  },
+  'beanie.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 280,
+  },
+  'beer.jpg': {
+    fontFile: fonts.playfair.black,
+    textPlacement: {
+      x: 650,
+      y: 330,
+    },
+    maxWidth: 400,
+  },
+  'bench.jpg': {
+    fontFile: fonts.playfair.black20,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 650,
+  },
+  'bike.jpg': {
+    fontFile: fonts.ruluko.black,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 600,
   },
   'cab.jpg': {
     fontFile: fonts.jost.white,
@@ -91,21 +99,29 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
-  'camera.jpg': {
-    fontFile: fonts.jost.black,
+  'camera_closeup.jpg': {
+    fontFile: fonts.ruluko.black,
     textPlacement: {
-      x: 145,
+      x: 600,
       y: 20,
     },
-    maxWidth: 620,
+    maxWidth: 300,
+  },
+  'camera_outside.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 550,
+      y: 20,
+    },
+    maxWidth: 350,
   },
   'campfire.jpg': {
-    fontFile: fonts.montserrat.black20,
+    fontFile: fonts.montserrat.black24,
     textPlacement: {
       x: 20,
       y: 20,
     },
-    maxWidth: 430,
+    maxWidth: 470,
   },
   'camping.jpg': {
     fontFile: fonts.montserrat.white24,
@@ -115,93 +131,117 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 430,
   },
-  'coffee.jpg': {
-    fontFile: fonts.ruluko.black,
+  'crosswalk.jpg': {
+    fontFile: fonts.jost.black,
     textPlacement: {
       x: 50,
       y: 50,
     },
-    maxWidth: 450,
-  },
-  'couple.jpg': {
-    fontFile: fonts.nawabiat.black,
-    textPlacement: {
-      x: 500,
-      y: 20,
-    },
     maxWidth: 400,
   },
-  'film.jpg': {
-    fontFile: fonts.nawabiat.black,
-    textPlacement: {
-      x: 650,
-      y: 20,
-    },
-    maxWidth: 270,
-  },
-  'fishing.jpg': {
+  'dj.jpg': {
     fontFile: fonts.ruluko.black,
     textPlacement: {
-      x: 240,
-      y: 20,
-    },
-    maxWidth: 550,
-  },
-  'flower.jpg': {
-    fontFile: fonts.playfair.black20,
-    textPlacement: {
       x: 20,
-      y: 450,
-    },
-    maxWidth: 400,
-  },
-  'frozen_drank.jpg': {
-    fontFile: fonts.ruluko.black,
-    textPlacement: {
-      x: 600,
-      y: 20,
-    },
-    maxWidth: 320,
-  },
-  'fruit.jpg': {
-    fontFile: fonts.nawabiat.black,
-    textPlacement: {
-      x: 20,
-      y: 250,
+      y: 175,
     },
     maxWidth: 300,
   },
-  'girl_camera.jpg': {
-    fontFile: fonts.nawabiat.white,
+  'field.jpg': {
+    fontFile: fonts.nawabiat.black,
     textPlacement: {
       x: 20,
       y: 20,
-    },
-    maxWidth: 300,
-  },
-  'girl_coffee.jpg': {
-    fontFile: fonts.ruluko.white,
-    textPlacement: {
-      x: 20,
-      y: 75,
-    },
-    maxWidth: 370,
-  },
-  'ocean.jpg': {
-    fontFile: fonts.ruluko.black,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 400,
-  },
-  'park.jpg': {
-    fontFile: fonts.ruluko.white,
-    textPlacement: {
-      x: 650,
-      y: 600,
     },
     maxWidth: 600,
+  },
+  'frozen_drank.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 400,
+      y: 50,
+    },
+    maxWidth: 350,
+  },
+  'girl_coffee.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 20,
+      y: 100,
+    },
+    maxWidth: 380,
+  },
+  'hiking_boots.jpg': {
+    fontFile: fonts.ruluko.black,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 300,
+  },
+  'hitchhiking.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 30,
+      y: 30,
+    },
+    maxWidth: 300,
+  },
+  'holding_flowers.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 630,
+      y: 20,
+    },
+    maxWidth: 260,
+  },
+  'horizon.jpg': {
+    fontFile: fonts.playfair.black20,
+    textPlacement: {
+      x: 30,
+      y: 335,
+    },
+    maxWidth: 300,
+  },
+  'jump.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 30,
+      y: 450,
+    },
+    maxWidth: 600,
+  },
+  'lake.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 500,
+  },
+  'lake2.jpg': {
+    fontFile: fonts.ruluko.black,
+    textPlacement: {
+      x: 130,
+      y: 200,
+    },
+    maxWidth: 380,
+  },
+  'nature.jpg': {
+    fontFile: fonts.montserrat.white24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 450,
+  },
+  'overlook.jpg': {
+    fontFile: fonts.montserrat.black24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 325,
   },
   'pier.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -209,74 +249,66 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       x: 20,
       y: 20,
     },
-    maxWidth: 400,
-  },
-  'plane.jpg': {
-    fontFile: fonts.montserrat.black24,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 600,
-  },
-  'plane2.jpg': {
-    fontFile: fonts.jost.black24,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 500,
+    maxWidth: 350,
   },
   'ponder_trees.jpg': {
-    fontFile: fonts.nawabiat.black,
+    fontFile: fonts.montserrat.black24,
     textPlacement: {
       x: 40,
       y: 20,
     },
     maxWidth: 350,
   },
-  'reststop.jpg': {
+  'railing.jpg': {
     fontFile: fonts.jost.black24,
     textPlacement: {
-      x: 500,
+      x: 300,
       y: 20,
     },
-    maxWidth: 370,
+    maxWidth: 500,
   },
   'river.jpg': {
-    fontFile: fonts.montserrat.black24,
-    textPlacement: {
-      x: 550,
-      y: 200,
-    },
-    maxWidth: 350,
-  },
-  'skateboard.jpg': {
-    fontFile: fonts.jost.black24,
+    fontFile: fonts.jost.white24,
     textPlacement: {
       x: 20,
-      y: 400,
+      y: 480,
     },
-    maxWidth: 370,
+    maxWidth: 600,
+  },
+  'running_field.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 50,
+      y: 50,
+    },
+    maxWidth: 650,
   },
   'ski.jpg': {
-    fontFile: fonts.ruluko.black,
+    fontFile: fonts.jost.white24,
     textPlacement: {
       x: 350,
-      y: 520,
+      y: 550,
     },
     maxWidth: 500,
   },
-  'steppe.jpg': {
-    fontFile: fonts.montserrat.black24,
+  'stairwell.jpg': {
+    fontFile: fonts.playfair.white24,
     textPlacement: {
-      x: 350,
-      y: 20,
+      x: 100,
+      y: 100,
     },
-    maxWidth: 500,
+    maxWidth: 300,
+  },
+  'stump.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 375,
+      y: 175,
+    },
+    maxWidth: 400,
   },
   'sunset_field.jpg': {
-    fontFile: fonts.playfair.black20,
+    fontFile: fonts.montserrat.black24,
     textPlacement: {
       x: 50,
       y: 50,
@@ -286,10 +318,18 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'swing.jpg': {
     fontFile: fonts.montserrat.black24,
     textPlacement: {
-      x: 900,
+      x: 600,
       y: 30,
     },
-    maxWidth: 420,
+    maxWidth: 300,
+  },
+  'tablet.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 250,
+      y: 20,
+    },
+    maxWidth: 375,
   },
   'toes.jpg': {
     fontFile: fonts.jost.black24,
@@ -299,19 +339,11 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
-  'tropical.jpg': {
-    fontFile: fonts.jost.black24,
-    textPlacement: {
-      x: 20,
-      y: 80,
-    },
-    maxWidth: 290,
-  },
   'windy.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
-      x: 20,
-      y: 20,
+      x: 50,
+      y: 50,
     },
     maxWidth: 350,
   },

@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import random from 'random'
+import { promisify } from 'util'
 import { tychei } from 'seedrandom'
 import { getRandomOrgInt } from './randomOrg'
 
@@ -16,7 +17,12 @@ function makeid(length: number) {
 
 export async function getRandomFilename(directoryPath: string) {
   const textFilenames = await getFilenames(directoryPath)
-  return getRandomOrgItem(textFilenames)
+
+  if (process.env.USE_LOCAL_RANDOM) {
+    return getRandomItem(textFilenames)
+  } else {
+    return getRandomOrgItem(textFilenames)
+  }
 }
 
 export function getRandomItem<T>(items: T[]) {

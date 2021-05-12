@@ -8,9 +8,11 @@ export const nawabiat = {
 export const playfair = {
   black: 'fontFiles/playfair/black.fnt',
   white: 'fontFiles/playfair/white.fnt',
+  white24: 'fontFiles/playfair/white24.fnt',
   white28: 'fontFiles/playfair/white-28.fnt',
   yellow: 'fontFiles/playfair/yellow.fnt',
   black20: 'fontFiles/playfair/black20.fnt',
+  blue24: 'fontFiles/playfair/blue24.fnt',
 }
 
 export const ruluko = {
@@ -28,6 +30,7 @@ export const jost = {
   black18: 'fontFiles/jost/black-18.fnt',
   black24: 'fontFiles/jost/black-24.fnt',
   white22: 'fontFiles/jost/white-22.fnt',
+  white24: 'fontFiles/jost/white24.fnt',
 }
 
 export const montserrat = {
