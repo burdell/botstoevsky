@@ -123,6 +123,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 470,
   },
+  'couple.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 200,
+      y: 425,
+    },
+    maxWidth: 450,
+  },
   'camping.jpg': {
     fontFile: fonts.montserrat.white24,
     textPlacement: {
@@ -155,6 +163,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 600,
   },
+  'flower.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 20,
+      y: 320,
+    },
+    maxWidth: 400,
+  },
   'frozen_drank.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -162,6 +178,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 50,
     },
     maxWidth: 350,
+  },
+  'girl_camera.jpg': {
+    fontFile: fonts.ruluko.white,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 300,
   },
   'girl_coffee.jpg': {
     fontFile: fonts.jost.white24,

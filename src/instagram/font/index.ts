@@ -9,6 +9,7 @@ export const playfair = {
   black: 'fontFiles/playfair/black.fnt',
   white: 'fontFiles/playfair/white.fnt',
   white24: 'fontFiles/playfair/white24.fnt',
+  black24: 'fontFiles/playfair/black24.fnt',
   white28: 'fontFiles/playfair/white-28.fnt',
   yellow: 'fontFiles/playfair/yellow.fnt',
   black20: 'fontFiles/playfair/black20.fnt',
