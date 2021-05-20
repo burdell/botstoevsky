@@ -131,6 +131,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 450,
   },
+  'couple2.jpg': {
+    fontFile: fonts.playfair.black24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 370,
+  },
+  'couple3.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 550,
+  },
   'camping.jpg': {
     fontFile: fonts.montserrat.white24,
     textPlacement: {
@@ -140,7 +156,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 430,
   },
   'crosswalk.jpg': {
-    fontFile: fonts.jost.black,
+    fontFile: fonts.playfair.black,
     textPlacement: {
       x: 50,
       y: 50,
@@ -155,6 +171,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
+  'drink.jpg': {
+    fontFile: fonts.nawabiat.white,
+    textPlacement: {
+      x: 20,
+      y: 170,
+    },
+    maxWidth: 300,
+  },
+  'edgy.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 30,
+      y: 30,
+    },
+    maxWidth: 300,
+  },
   'field.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -162,6 +194,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 600,
+  },
+  'field2.jpg': {
+    fontFile: fonts.playfair.black24,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 300,
   },
   'flower.jpg': {
     fontFile: fonts.jost.black24,
@@ -222,10 +262,10 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'horizon.jpg': {
     fontFile: fonts.playfair.black20,
     textPlacement: {
-      x: 30,
-      y: 335,
+      x: 70,
+      y: 70,
     },
-    maxWidth: 300,
+    maxWidth: 410,
   },
   'jump.jpg': {
     fontFile: fonts.jost.white24,
@@ -251,6 +291,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 380,
   },
+  'lake3.jpg': {
+    fontFile: fonts.playfair.white24,
+    textPlacement: {
+      x: 20,
+      y: 270,
+    },
+    maxWidth: 320,
+  },
+  'leaves.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 30,
+      y: 300,
+    },
+    maxWidth: 480,
+  },
   'nature.jpg': {
     fontFile: fonts.montserrat.white24,
     textPlacement: {
@@ -274,6 +330,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 350,
+  },
+  'pocket.jpg': {
+    fontFile: fonts.playfair.white24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 400,
   },
   'ponder_trees.jpg': {
     fontFile: fonts.montserrat.black24,
@@ -307,6 +371,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 650,
   },
+  'shopping.jpg': {
+    fontFile: fonts.playfair.black24,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 350,
+  },
   'ski.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
@@ -314,6 +386,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 550,
     },
     maxWidth: 500,
+  },
+  'skateboard.jpg': {
+    fontFile: fonts.jost.white24,
+    textPlacement: {
+      x: 20,
+      y: 90,
+    },
+    maxWidth: 330,
   },
   'stairwell.jpg': {
     fontFile: fonts.playfair.white24,
@@ -351,6 +431,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     fontFile: fonts.jost.black24,
     textPlacement: {
       x: 250,
+      y: 20,
+    },
+    maxWidth: 375,
+  },
+  'texting.jpg': {
+    fontFile: fonts.playfair.white24,
+    textPlacement: {
+      x: 500,
       y: 20,
     },
     maxWidth: 375,
