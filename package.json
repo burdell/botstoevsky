@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack && cp ./template.yml ./dist && cp -r ./src/texts ./dist && cp -r ./src/images/backgrounds ./dist/images && cp -r ./src/images/font/fontFiles ./dist/images/font",
+    "build": "webpack && cp ./template.yml ./dist && cp -r ./src/texts ./dist && cp -r ./src/images/backgrounds ./dist/images && cp -r ./src/fonts/fontFiles ./dist/fonts",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts",
     "package-server": "aws cloudformation package --template-file ./dist/template.yml --output-template-file ./dist/serverless-output.yml --s3-bucket russian-lit-twitter",
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",

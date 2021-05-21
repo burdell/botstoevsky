@@ -49,7 +49,7 @@ async function writeTextOnFile(
 ) {
   const { image, config } = imageOptions
   return Jimp.loadFont(
-    path.resolve(__dirname, `./font/${config.fontFile}`)
+    path.resolve(__dirname, `../fonts/${config.fontFile}`)
   ).then((font) => {
     image.print(
       font,

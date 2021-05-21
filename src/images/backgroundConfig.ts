@@ -1,4 +1,4 @@
-import * as fonts from './font'
+import * as fonts from '../fonts'
 
 export type BackgroundConfig = {
   fontFile: string
