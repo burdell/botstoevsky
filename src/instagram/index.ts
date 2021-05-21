@@ -1,4 +1,8 @@
-import { generateRandomImage, getImageBuffer } from '../images'
+import { IgApiClient } from 'instagram-private-api'
+
+import { getRandomImage } from '../getRandomImage'
+import { getImageBuffer } from '../images'
+import { TextMetadata } from '../getRandomSentence/meta'
 
 export async function handler() {
   try {
@@ -17,14 +21,10 @@ export async function handler() {
 }
 
 async function createImageAndPost() {
-  const imageResult = await generateRandomImage()
+  const imageResult = await getRandomImage()
   const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
   await uploadPhoto(imageBuffer, imageResult.text.meta)
 }
-
-import { IgApiClient } from 'instagram-private-api'
-
-import { TextMetadata } from '../getRandomSentence/meta'
 
 function getCredentials() {
   const username = process.env.IG_USERNAME

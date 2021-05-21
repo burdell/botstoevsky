@@ -2,7 +2,8 @@ import Twitter from 'twitter'
 
 import { getRandomSentence } from '../getRandomSentence'
 import { TextMetadata } from '../getRandomSentence/meta'
-import { generateRandomImage, getImageBuffer } from '../images'
+import { getRandomImage } from '../getRandomImage'
+import { getImageBuffer } from '../images'
 
 export async function textHandler() {
   const { sentence } = await getRandomSentence()
@@ -34,7 +35,7 @@ function getTwitterClient() {
 
 export async function sendMediaTweet() {
   const sentence = await getRandomSentence()
-  const imageResult = await generateRandomImage({ sentenceToUse: sentence })
+  const imageResult = await getRandomImage({ sentenceToUse: sentence })
   const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
 
   const client = getTwitterClient()

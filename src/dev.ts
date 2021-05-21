@@ -5,7 +5,7 @@ import { config } from 'dotenv'
 config()
 
 import { getRandomSentence } from './getRandomSentence'
-import { generateRandomImage } from './images'
+import { getRandomImage } from './getRandomImage'
 import {
   textHandler as twitterTextHandler,
   imageHandler as twitterImageHandler,
@@ -29,7 +29,7 @@ const thingsToDo = {
       fileName = `${fileName}.jpg`
     }
 
-    const imageResult = await generateRandomImage({ backgroundToUse: fileName })
+    const imageResult = await getRandomImage({ backgroundToUse: fileName })
     imageResult.imageOptions.image.write(
       resolve(__dirname, './instagram/result.jpg')
     )
