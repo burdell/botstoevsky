@@ -1,11 +1,4 @@
-import Jimp from 'jimp'
-import * as path from 'path'
-
-import { getRandomSentence } from '../getRandomSentence'
-import { getRandomFilename } from '../random'
-import type { BackgroundConfig } from './backgroundConfig'
-import { uploadPhoto } from './uploadPhoto'
-import { backgroundConfig, defaultConfig } from '../instagram/backgroundConfig'
+import { generateRandomImage, getImageBuffer } from '../images'
 
 export async function handler() {
   try {
@@ -29,54 +22,43 @@ async function createImageAndPost() {
   await uploadPhoto(imageBuffer, imageResult.text.meta)
 }
 
-export async function generateRandomImage(backgroundToUse?: string) {
-  const imageOptionsPromise = getBackground(backgroundToUse)
-  const textPromise = getRandomSentence()
-  const [imageOptions, text] = await Promise.all([
-    imageOptionsPromise,
-    textPromise,
-  ])
+import { IgApiClient } from 'instagram-private-api'
 
-  const { sentence } = text
-  await writeTextOnFile(imageOptions, sentence)
+import { TextMetadata } from '../getRandomSentence/meta'
 
-  return { imageOptions, text }
+function getCredentials() {
+  const username = process.env.IG_USERNAME
+  const password = process.env.IG_PASSWORD
+
+  if (!username || !password) {
+    throw new Error('Credentials not set for Instagram')
+  }
+
+  return { username, password }
 }
 
-async function getBackground(backgroundToUse?: string) {
-  const pathToBackgrounds = path.resolve(__dirname, '../instagram/backgrounds')
-  const filename =
-    backgroundToUse || (await getRandomFilename(pathToBackgrounds))
+async function login() {
+  const ig = new IgApiClient()
+  const { username, password } = getCredentials()
 
-  const config = backgroundConfig[filename] || defaultConfig
-  const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
+  ig.state.generateDevice(username)
+  await ig.account.login(username, password)
 
-  return { image, config }
+  return ig
 }
 
-async function writeTextOnFile(
-  imageOptions: { image: Jimp; config: BackgroundConfig },
-  text: string
-) {
-  const { image, config } = imageOptions
-  return Jimp.loadFont(
-    path.resolve(__dirname, `./font/${config.fontFile}`)
-  ).then((font) => {
-    image.print(
-      font,
-      config.textPlacement.x,
-      config.textPlacement.y,
-      text,
-      config.maxWidth
-    )
+export async function uploadPhoto(file: Buffer, metadata: TextMetadata) {
+  const client = await login()
+  const publishResult = await client.publish.photo({
+    file,
+    caption: generateCaption(metadata),
   })
+
+  return publishResult
 }
 
-async function getImageBuffer(image: Jimp): Promise<Buffer> {
-  return new Promise((res, rej) => {
-    image.getBuffer(Jimp.MIME_JPEG, (err, buffer) => {
-      if (err) rej('Image buffer FAILED')
-      res(buffer)
-    })
-  })
+function generateCaption(metadata: TextMetadata) {
+  if (!metadata) return undefined
+
+  return `[${metadata.title}]`
 }

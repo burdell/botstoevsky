@@ -5,8 +5,11 @@ import { config } from 'dotenv'
 config()
 
 import { getRandomSentence } from './getRandomSentence'
-import { generateRandomImage } from './instagram'
-import { handler as twitterHandler } from './twitter'
+import { generateRandomImage } from './images'
+import {
+  textHandler as twitterTextHandler,
+  imageHandler as twitterImageHandler,
+} from './twitter'
 import { handler as instagramHandler } from './instagram'
 
 const thingsToDo = {
@@ -26,13 +29,16 @@ const thingsToDo = {
       fileName = `${fileName}.jpg`
     }
 
-    const imageResult = await generateRandomImage(fileName)
+    const imageResult = await generateRandomImage({ backgroundToUse: fileName })
     imageResult.imageOptions.image.write(
       resolve(__dirname, './instagram/result.jpg')
     )
   },
+  sendImageToTwitter: async () => {
+    await twitterImageHandler()
+  },
   sendToTwitter: async () => {
-    await twitterHandler()
+    await twitterTextHandler()
   },
   sendToInstagram: async () => {
     await instagramHandler()

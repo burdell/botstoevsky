@@ -4,7 +4,12 @@ import * as tokenizer from 'sbd'
 import dedent from 'ts-dedent'
 
 import { getRandomFilename, getRandomInt, getRandomItem } from '../random'
-import { textMetadata } from './meta'
+import { TextMetadata, textMetadata } from './meta'
+
+export type SentenceResponse = {
+  sentence: string
+  meta: TextMetadata
+}
 
 export async function getRandomSentence(desiredFilename?: string) {
   const pathToTexts = path.resolve(__dirname, '../texts')

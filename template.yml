@@ -11,14 +11,14 @@ Resources:
           TWITTER_ACCESS_KEY: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_KEY}}'
           TWITTER_ACCESS_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_SECRET}}'
           RANDOM_ORG_KEY: '{{resolve:secretsmanager:OtherCreds:SecretString:RANDOM_ORG_KEY}}'
-      Handler: twitter.handler
+      Handler: twitter.textHandler
       Runtime: nodejs12.x
       Role: arn:aws:iam::435716529842:role/LambdaReadOnly
 
   TweetEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 0/6 * * ? *)
+      ScheduleExpression: cron(0 17,5 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:
@@ -37,6 +37,44 @@ Resources:
       SourceArn:
         Fn::GetAtt:
           - 'TweetEvent'
+          - 'Arn'
+
+  SendImageTweet:
+    Type: AWS::Lambda::Function
+    Properties:
+      Environment:
+        Variables:
+          TWITTER_CONSUMER_KEY: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_CONSUMER_KEY}}'
+          TWITTER_CONSUMER_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_CONSUMER_SECRET}}'
+          TWITTER_ACCESS_KEY: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_KEY}}'
+          TWITTER_ACCESS_SECRET: '{{resolve:secretsmanager:TwitterCreds:SecretString:TWITTER_ACCESS_SECRET}}'
+          RANDOM_ORG_KEY: '{{resolve:secretsmanager:OtherCreds:SecretString:RANDOM_ORG_KEY}}'
+      Handler: twitter.imageHandler
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::435716529842:role/LambdaReadOnly
+
+  ImageTweetEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      ScheduleExpression: cron(0 11,23 * * ? *)
+      State: 'ENABLED'
+      Targets:
+        - Arn:
+            Fn::GetAtt:
+              - 'SendImageTweet'
+              - 'Arn'
+          Id: 'TargetFunctionV1'
+
+  ImageTweetPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName:
+        Ref: 'SendImageTweet'
+      Action: 'lambda:InvokeFunction'
+      Principal: 'events.amazonaws.com'
+      SourceArn:
+        Fn::GetAtt:
+          - 'ImageTweetEvent'
           - 'Arn'
 
   PostToInstagram:
