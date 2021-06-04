@@ -51,6 +51,7 @@ Resources:
           RANDOM_ORG_KEY: '{{resolve:secretsmanager:OtherCreds:SecretString:RANDOM_ORG_KEY}}'
       Handler: twitter.imageHandler
       Runtime: nodejs12.x
+      Timeout: 60
       Role: arn:aws:iam::435716529842:role/LambdaReadOnly
 
   ImageTweetEvent:

@@ -20,7 +20,7 @@ export const defaultConfig: BackgroundConfig = {
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
   'balloon.jpg': {
-    fontFile: fonts.jost.black24,
+    fontFile: fonts.zeyada.black28,
     textPlacement: {
       x: 80,
       y: 300,
@@ -54,6 +54,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'beach.jpg': {
     fontFile: fonts.jost.black24,
     textPlacement: {
+      x: 590,
+      y: 10,
+    },
+    maxWidth: 300,
+  },
+  'beach2.jpg': {
+    fontFile: fonts.miniStory.black28,
+    textPlacement: {
       x: 575,
       y: 30,
     },
@@ -68,7 +76,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 280,
   },
   'beer.jpg': {
-    fontFile: fonts.playfair.black,
+    fontFile: fonts.stayWriter.black36,
     textPlacement: {
       x: 650,
       y: 330,
@@ -83,6 +91,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 650,
   },
+  'bench2.jpg': {
+    fontFile: fonts.jost.black24,
+    textPlacement: {
+      x: 70,
+      y: 70,
+    },
+    maxWidth: 500,
+  },
   'bike.jpg': {
     fontFile: fonts.ruluko.black,
     textPlacement: {
@@ -92,7 +108,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 600,
   },
   'cab.jpg': {
-    fontFile: fonts.jost.white,
+    fontFile: fonts.jost.white24,
     textPlacement: {
       x: 400,
       y: 300,
@@ -123,16 +139,24 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 470,
   },
-  'couple.jpg': {
-    fontFile: fonts.jost.white24,
+  'canoe.jpg': {
+    fontFile: fonts.sleeky.white28,
     textPlacement: {
-      x: 200,
-      y: 425,
+      x: 300,
+      y: 360,
+    },
+    maxWidth: 470,
+  },
+  'couple.jpg': {
+    fontFile: fonts.stalemate.black36,
+    textPlacement: {
+      x: 20,
+      y: 20,
     },
     maxWidth: 450,
   },
   'couple2.jpg': {
-    fontFile: fonts.playfair.black24,
+    fontFile: fonts.zeyada.black32,
     textPlacement: {
       x: 20,
       y: 20,
@@ -187,6 +211,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
+  'driver.jpg': {
+    fontFile: fonts.stayWriter.white36,
+    textPlacement: {
+      x: 300,
+      y: 200,
+    },
+    maxWidth: 500,
+  },
   'edgy.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
@@ -204,12 +236,20 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 600,
   },
   'field2.jpg': {
-    fontFile: fonts.playfair.black24,
+    fontFile: fonts.gabriela.black28,
     textPlacement: {
       x: 10,
       y: 10,
     },
     maxWidth: 300,
+  },
+  'flare.jpg': {
+    fontFile: fonts.stayWriter.white36,
+    textPlacement: {
+      x: 20,
+      y: 380,
+    },
+    maxWidth: 450,
   },
   'flower.jpg': {
     fontFile: fonts.jost.black24,
@@ -276,9 +316,17 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 300,
   },
   'hipster.jpg': {
-    fontFile: fonts.playfair.black24,
+    fontFile: fonts.gabriela.black28,
     textPlacement: {
-      x: 570,
+      x: 590,
+      y: 10,
+    },
+    maxWidth: 320,
+  },
+  'jeans.jpg': {
+    fontFile: fonts.merriweather.white28,
+    textPlacement: {
+      x: 20,
       y: 10,
     },
     maxWidth: 320,
@@ -292,10 +340,10 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 260,
   },
   'horizon.jpg': {
-    fontFile: fonts.playfair.black20,
+    fontFile: fonts.miniStory.black28,
     textPlacement: {
-      x: 70,
-      y: 70,
+      x: 30,
+      y: 30,
     },
     maxWidth: 410,
   },
@@ -331,6 +379,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 320,
   },
+  'lake4.jpg': {
+    fontFile: fonts.miniStory.black28,
+    textPlacement: {
+      x: 70,
+      y: 70,
+    },
+    maxWidth: 350,
+  },
+  'lake5.jpg': {
+    fontFile: fonts.sleeky.black28,
+    textPlacement: {
+      x: 550,
+      y: 20,
+    },
+    maxWidth: 390,
+  },
   'leaves.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
@@ -347,6 +411,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 450,
   },
+  'ocean.jpg': {
+    fontFile: fonts.zeyada.black32,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 330,
+  },
   'overlook.jpg': {
     fontFile: fonts.montserrat.black24,
     textPlacement: {
@@ -354,6 +426,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 325,
+  },
+  'palm.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 350,
   },
   'pier.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -427,6 +507,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 330,
   },
+  'snorkel.jpg': {
+    fontFile: fonts.stayWriter.white36,
+    textPlacement: {
+      x: 150,
+      y: 150,
+    },
+    maxWidth: 400,
+  },
   'snow.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -443,11 +531,27 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
+  'sports.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 20,
+      y: 320,
+    },
+    maxWidth: 440,
+  },
   'stump.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
       x: 375,
       y: 175,
+    },
+    maxWidth: 400,
+  },
+  'sunset.jpg': {
+    fontFile: fonts.nawabiat.black,
+    textPlacement: {
+      x: 475,
+      y: 20,
     },
     maxWidth: 400,
   },
@@ -466,6 +570,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 30,
     },
     maxWidth: 300,
+  },
+  'swim.jpg': {
+    fontFile: fonts.stayWriter.white28,
+    textPlacement: {
+      x: 200,
+      y: 30,
+    },
+    maxWidth: 475,
   },
   'tie.jpg': {
     fontFile: fonts.jost.white24,
@@ -498,6 +610,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 400,
+  },
+  'tourist.jpg': {
+    fontFile: fonts.jost.black,
+    textPlacement: {
+      x: 480,
+      y: 10,
+    },
+    maxWidth: 375,
+  },
+  'water.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 20,
+      y: 470,
+    },
+    maxWidth: 650,
   },
   'wedding.jpg': {
     fontFile: fonts.playfair.black24,

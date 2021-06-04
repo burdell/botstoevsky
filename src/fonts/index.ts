@@ -40,3 +40,44 @@ export const montserrat = {
   black24: 'fontFiles/montserrat/black24.fnt',
   white24: 'fontFiles/montserrat/white24.fnt',
 }
+
+export const miniStory = {
+  white28: 'fontFiles/miniStory/white-28.fnt',
+  black28: 'fontFiles/miniStory/black-28.fnt',
+}
+
+export const sleeky = {
+  white28: 'fontFiles/sleeky/white-28.fnt',
+  black28: 'fontFiles/sleeky/black-28.fnt',
+}
+
+export const stalemate = {
+  white28: 'fontFiles/stalemate/white-28.fnt',
+  black28: 'fontFiles/stalemate/black-28.fnt',
+  white36: 'fontFiles/stalemate/white-36.fnt',
+  black36: 'fontFiles/stalemate/black-36.fnt',
+}
+
+export const stayWriter = {
+  white36: 'fontFiles/staywriter/white-36.fnt',
+  black36: 'fontFiles/staywriter/black-36.fnt',
+  white28: 'fontFiles/staywriter/white-28.fnt',
+  black28: 'fontFiles/staywriter/black-28.fnt',
+}
+
+export const merriweather = {
+  white28: 'fontFiles/merriweather/white-28.fnt',
+  black28: 'fontFiles/merriweather/black-28.fnt',
+}
+
+export const gabriela = {
+  white28: 'fontFiles/gabriela/white-28.fnt',
+  black28: 'fontFiles/gabriela/black-28.fnt',
+}
+
+export const zeyada = {
+  white28: 'fontFiles/zeyada/white-28.fnt',
+  black28: 'fontFiles/zeyada/black-28.fnt',
+  white32: 'fontFiles/zeyada/white-32.fnt',
+  black32: 'fontFiles/zeyada/black-32.fnt',
+}
