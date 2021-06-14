@@ -32,6 +32,8 @@ export const jost = {
   black24: 'fontFiles/jost/black-24.fnt',
   white22: 'fontFiles/jost/white-22.fnt',
   white24: 'fontFiles/jost/white24.fnt',
+  white28: 'fontFiles/jost/white-28.fnt',
+  black28: 'fontFiles/jost/black-28.fnt',
 }
 
 export const montserrat = {
@@ -44,6 +46,8 @@ export const montserrat = {
 export const miniStory = {
   white28: 'fontFiles/miniStory/white-28.fnt',
   black28: 'fontFiles/miniStory/black-28.fnt',
+  white32: 'fontFiles/miniStory/white-32.fnt',
+  black32: 'fontFiles/miniStory/black-32.fnt',
 }
 
 export const sleeky = {
