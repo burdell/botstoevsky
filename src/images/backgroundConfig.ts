@@ -22,10 +22,10 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'beach.jpg': {
     fontFile: fonts.miniStory.black28,
     textPlacement: {
-      x: 500,
-      y: 30,
+      x: 10,
+      y: 10,
     },
-    maxWidth: 300,
+    maxWidth: 700,
   },
   'beach3.jpg': {
     fontFile: fonts.gabriela.black28,
@@ -73,7 +73,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       x: 370,
       y: 80,
     },
-    maxWidth: 470,
+    maxWidth: 430,
   },
   'coffee.jpg': {
     fontFile: fonts.jost.white24,
@@ -131,6 +131,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 500,
   },
+  'flowers.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 30,
+      y: 30,
+    },
+    maxWidth: 500,
+  },
   'garage.jpg': {
     fontFile: fonts.jost.black28,
     textPlacement: {
@@ -146,6 +154,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 140,
     },
     maxWidth: 450,
+  },
+  'hike.jpg': {
+    fontFile: fonts.stayWriter.white28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 380,
   },
   'horizon.jpg': {
     fontFile: fonts.miniStory.black28,
@@ -211,6 +227,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
+  'mountains2.jpg': {
+    fontFile: fonts.miniStory.black28,
+    textPlacement: {
+      x: 300,
+      y: 30,
+    },
+    maxWidth: 500,
+  },
   'ocean.jpg': {
     fontFile: fonts.stayWriter.black28,
     textPlacement: {
@@ -267,6 +291,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 330,
   },
+  'silouette.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 700,
+  },
+  'silouette2.jpg': {
+    fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 20,
+      y: 450,
+    },
+    maxWidth: 700,
+  },
   'skateboard.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
@@ -315,6 +355,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
+  'sunflowers.jpg': {
+    fontFile: fonts.stayWriter.black28,
+    textPlacement: {
+      x: 30,
+      y: 30,
+    },
+    maxWidth: 500,
+  },
   'sunset2.jpg': {
     fontFile: fonts.jost.white24,
     textPlacement: {
@@ -339,13 +387,13 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 380,
   },
-  'texting.jpg': {
-    fontFile: fonts.gabriela.white28,
+  'swimming2.jpg': {
+    fontFile: fonts.stayWriter.black28,
     textPlacement: {
-      x: 500,
+      x: 20,
       y: 20,
     },
-    maxWidth: 375,
+    maxWidth: 330,
   },
   'window.jpg': {
     fontFile: fonts.stayWriter.white28,
