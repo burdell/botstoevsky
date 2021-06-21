@@ -37,6 +37,8 @@ function cleanSentence(sentence: string) {
       .replace(/ï/g, 'i')
       .replace(/ü/g, 'u')
       .replace(/â/g, 'a')
+      .replace(/—/g, '-')
+      .replace(/\. \. \./, '...')
   )
 }
 

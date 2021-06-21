@@ -10,7 +10,7 @@
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts",
     "package-server": "aws cloudformation package --template-file ./dist/template.yml --output-template-file ./dist/serverless-output.yml --s3-bucket russian-lit-twitter",
     "deploy-server": "aws cloudformation deploy --template-file ./dist/serverless-output.yml --stack-name RussianLitTwitter --capabilities CAPABILITY_IAM",
-    "deploy": "npm run build && npm run package-server && npm run deploy-server",
+    "deploy": "npm run clean && npm run build && npm run package-server && npm run deploy-server",
     "clean-file": "sed -i '' '/^$/d' ",
     "gen-image": "ts-node --files ./src/dev.ts genImage",
     "sentence": "ts-node --files ./src/dev.ts sentence",
@@ -18,7 +18,8 @@
     "twitterImage": "ts-node --files ./src/dev.ts sendImageToTwitter",
     "instagram": "ts-node --files ./src/dev.ts sendToInstagram",
     "profile": "ts-node --files ./src/dev.ts profile",
-    "dev": "ts-node --files ./src/dev.ts"
+    "dev": "ts-node --files ./src/dev.ts",
+    "clean": "node -e \"require('fs-extra').emptyDir('dist');\""
   },
   "prettier": {
     "semi": false,
