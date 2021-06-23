@@ -52,7 +52,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 280,
   },
   'bench2.jpg': {
-    fontFile: fonts.jost.black24,
+    fontFile: fonts.jost.black28,
     textPlacement: {
       x: 30,
       y: 30,
@@ -60,7 +60,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 500,
   },
   'campfire.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 60,
       y: 40,
@@ -76,7 +76,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 430,
   },
   'coffee.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 370,
       y: 350,
@@ -284,20 +284,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 360,
   },
   'ponder_trees.jpg': {
-    fontFile: fonts.montserrat.black24,
+    fontFile: fonts.gabriela.black28,
     textPlacement: {
-      x: 40,
+      x: 20,
       y: 20,
     },
     maxWidth: 350,
-  },
-  'railing.jpg': {
-    fontFile: fonts.jost.black24,
-    textPlacement: {
-      x: 300,
-      y: 20,
-    },
-    maxWidth: 500,
   },
   'rain.jpg': {
     fontFile: fonts.stayWriter.white28,
@@ -316,12 +308,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 320,
   },
   'river.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 20,
       y: 480,
     },
-    maxWidth: 600,
+    maxWidth: 700,
   },
   'sand.jpg': {
     fontFile: fonts.jost.black28,
@@ -356,7 +348,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 700,
   },
   'skateboard.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 20,
       y: 90,
@@ -396,7 +388,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 300,
   },
   'stump.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 375,
       y: 175,
@@ -412,7 +404,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 500,
   },
   'sunset2.jpg': {
-    fontFile: fonts.jost.white24,
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 500,
       y: 280,
