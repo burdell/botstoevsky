@@ -83,6 +83,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 470,
   },
+  'crowd.jpg': {
+    fontFile: fonts.miniStory.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 600,
+  },
   'field.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -211,6 +219,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 600,
   },
+  'karate.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 350,
+  },
   'lake4.jpg': {
     fontFile: fonts.miniStory.black28,
     textPlacement: {
@@ -306,6 +322,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 480,
     },
     maxWidth: 600,
+  },
+  'sand.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 350,
+      y: 150,
+    },
+    maxWidth: 400,
   },
   'sheets.jpg': {
     fontFile: fonts.miniStory.black28,
