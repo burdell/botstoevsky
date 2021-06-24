@@ -31,3 +31,8 @@ export const gabriela = {
   white28: 'fontFiles/gabriela/white-28.fnt',
   black28: 'fontFiles/gabriela/black-28.fnt',
 }
+
+export const patrickHand = {
+  white28: 'fontFiles/patrickHand/white-28.fnt',
+  black28: 'fontFiles/patrickHand/black-28.fnt',
+}

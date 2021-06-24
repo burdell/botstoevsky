@@ -68,9 +68,9 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 450,
   },
   'canoe2.jpg': {
-    fontFile: fonts.nawabiat.black,
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
-      x: 370,
+      x: 400,
       y: 80,
     },
     maxWidth: 430,
@@ -104,14 +104,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     textPlacement: {
       x: 10,
       y: 330,
-    },
-    maxWidth: 450,
-  },
-  'flare.jpg': {
-    fontFile: fonts.stayWriter.white36,
-    textPlacement: {
-      x: 20,
-      y: 380,
     },
     maxWidth: 450,
   },
@@ -156,12 +148,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 400,
   },
   'girl_coffee.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.patrickHand.white28,
     textPlacement: {
       x: 10,
-      y: 140,
+      y: 130,
     },
-    maxWidth: 450,
+    maxWidth: 350,
   },
   'glasses.jpg': {
     fontFile: fonts.merriweather.white28,
@@ -172,12 +164,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 310,
   },
   'hike.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.patrickHand.white28,
     textPlacement: {
       x: 20,
       y: 20,
     },
-    maxWidth: 380,
+    maxWidth: 330,
   },
   'horizon.jpg': {
     fontFile: fonts.miniStory.black28,
@@ -204,15 +196,15 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 410,
   },
   'jump.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.merriweather.white28,
     textPlacement: {
       x: 30,
       y: 450,
     },
-    maxWidth: 600,
+    maxWidth: 670,
   },
   'jump2.jpg': {
-    fontFile: fonts.stayWriter.black28,
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
       x: 30,
       y: 480,
@@ -268,7 +260,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 350,
   },
   'ocean.jpg': {
-    fontFile: fonts.stayWriter.black28,
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
       x: 20,
       y: 20,
@@ -292,20 +284,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 350,
   },
   'rain.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.patrickHand.white28,
     textPlacement: {
-      x: 500,
-      y: 300,
+      x: 470,
+      y: 270,
     },
     maxWidth: 400,
-  },
-  'record.jpg': {
-    fontFile: fonts.stayWriter.white28,
-    textPlacement: {
-      x: 60,
-      y: 120,
-    },
-    maxWidth: 320,
   },
   'river.jpg': {
     fontFile: fonts.jost.white28,
@@ -371,14 +355,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 700,
   },
-  'snorkel.jpg': {
-    fontFile: fonts.stayWriter.white36,
-    textPlacement: {
-      x: 150,
-      y: 150,
-    },
-    maxWidth: 400,
-  },
   'stairwell.jpg': {
     fontFile: fonts.gabriela.white28,
     textPlacement: {
@@ -396,7 +372,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 400,
   },
   'sunflowers.jpg': {
-    fontFile: fonts.stayWriter.black28,
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
       x: 30,
       y: 30,
@@ -420,7 +396,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 350,
   },
   'swim.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.patrickHand.white28,
     textPlacement: {
       x: 200,
       y: 30,
@@ -428,25 +404,17 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 475,
   },
   'swimming.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.gabriela.white28,
     textPlacement: {
       x: 20,
-      y: 420,
+      y: 380,
     },
-    maxWidth: 380,
-  },
-  'swimming2.jpg': {
-    fontFile: fonts.stayWriter.black28,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 330,
+    maxWidth: 400,
   },
   'walk.jpg': {
-    fontFile: fonts.stayWriter.white28,
+    fontFile: fonts.gabriela.white28,
     textPlacement: {
-      x: 240,
+      x: 50,
       y: 500,
     },
     maxWidth: 700,
@@ -460,7 +428,7 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 350,
   },
   'windy2.jpg': {
-    fontFile: fonts.stayWriter.black28,
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
       x: 80,
       y: 80,
