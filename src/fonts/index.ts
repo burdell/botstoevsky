@@ -15,13 +15,6 @@ export const miniStory = {
   black32: 'fontFiles/miniStory/black-32.fnt',
 }
 
-export const stayWriter = {
-  white36: 'fontFiles/staywriter/white-36.fnt',
-  black36: 'fontFiles/staywriter/black-36.fnt',
-  white28: 'fontFiles/staywriter/white-28.fnt',
-  black28: 'fontFiles/staywriter/black-28.fnt',
-}
-
 export const merriweather = {
   white28: 'fontFiles/merriweather/white-28.fnt',
   black28: 'fontFiles/merriweather/black-28.fnt',
