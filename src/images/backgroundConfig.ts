@@ -371,6 +371,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 700,
   },
+  'sparklers.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 400,
+  },
   'stairwell.jpg': {
     fontFile: fonts.gabriela.white28,
     textPlacement: {
