@@ -91,6 +91,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 500,
   },
+  'blue.jpg': {
+    fontFile: fonts.merriweather.white28,
+    textPlacement: {
+      x: 600,
+      y: 80,
+    },
+    maxWidth: 300,
+  },
   'boat.jpg': {
     fontFile: fonts.jost.black28,
     textPlacement: {
@@ -706,6 +714,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 500,
     },
     maxWidth: 700,
+  },
+  'wedding.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 20,
+      y: 160,
+    },
+    maxWidth: 350,
+  },
+  'wedding2.jpg': {
+    fontFile: fonts.patrickHand.white28,
+    textPlacement: {
+      x: 30,
+      y: 250,
+    },
+    maxWidth: 300,
   },
   'wind.jpg': {
     fontFile: fonts.gabriela.black28,
