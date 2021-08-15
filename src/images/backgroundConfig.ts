@@ -19,6 +19,22 @@ export const defaultConfig: BackgroundConfig = {
 }
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
+  'balloons.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 30,
+      y: 30,
+    },
+    maxWidth: 650,
+  },
+  'beach.jpg': {
+    fontFile: fonts.patrickHand.black28,
+    textPlacement: {
+      x: 500,
+      y: 10,
+    },
+    maxWidth: 400,
+  },
   'beach2.jpg': {
     fontFile: fonts.miniStory.black28,
     textPlacement: {
@@ -35,13 +51,21 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 700,
   },
-  'beach10.jpg': {
+  'beach6.jpg': {
     fontFile: fonts.gabriela.black28,
     textPlacement: {
       x: 500,
-      y: 100,
+      y: 40,
     },
     maxWidth: 380,
+  },
+  'beers.jpg': {
+    fontFile: fonts.patrickHand.black28,
+    textPlacement: {
+      x: 150,
+      y: 10,
+    },
+    maxWidth: 400,
   },
   'bench2.jpg': {
     fontFile: fonts.jost.black28,
@@ -99,6 +123,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
+  'canoe2.jpg': {
+    fontFile: fonts.patrickHand.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 400,
+  },
   'car.jpg': {
     fontFile: fonts.nawabiat.black,
     textPlacement: {
@@ -131,6 +163,30 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 350,
   },
+  'city2.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 600,
+  },
+  'city3.jpg': {
+    fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 250,
+      y: 10,
+    },
+    maxWidth: 580,
+  },
+  'coffee.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 500,
+    },
+    maxWidth: 800,
+  },
   'coat.jpg': {
     fontFile: fonts.jost.white28,
     textPlacement: {
@@ -149,6 +205,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   },
   'deck.jpg': {
     fontFile: fonts.merriweather.white28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 600,
+  },
+  'desert.jpg': {
+    fontFile: fonts.jost.white28,
     textPlacement: {
       x: 20,
       y: 20,
@@ -339,13 +403,13 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 450,
   },
-  'lake2.jpg': {
-    fontFile: fonts.merriweather.black28,
+  'lake.jpg': {
+    fontFile: fonts.patrickHand.black28,
     textPlacement: {
       x: 20,
       y: 20,
     },
-    maxWidth: 500,
+    maxWidth: 660,
   },
   'laugh.jpg': {
     fontFile: fonts.nawabiat.black,
@@ -419,6 +483,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 450,
   },
+  'park.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 400,
+    },
+    maxWidth: 500,
+  },
   'polo.jpg': {
     fontFile: fonts.jost.black28,
     textPlacement: {
@@ -428,12 +500,12 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     maxWidth: 300,
   },
   'pool.jpg': {
-    fontFile: fonts.patrickHand.white28,
+    fontFile: fonts.gabriela.white28,
     textPlacement: {
-      x: 350,
-      y: 400,
+      x: 10,
+      y: 10,
     },
-    maxWidth: 500,
+    maxWidth: 380,
   },
   'rain.jpg': {
     fontFile: fonts.patrickHand.white28,
@@ -507,6 +579,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
+  'snow.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 500,
+  },
   'sparklers.jpg': {
     fontFile: fonts.gabriela.white28,
     textPlacement: {
@@ -517,6 +597,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   },
   'sparklers2.jpg': {
     fontFile: fonts.patrickHand.black28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 380,
+  },
+  'stairs.jpg': {
+    fontFile: fonts.nawabiat.white,
     textPlacement: {
       x: 10,
       y: 10,
@@ -634,6 +722,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 500,
     },
     maxWidth: 700,
+  },
+  'wall.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 10,
+      y: 100,
+    },
+    maxWidth: 350,
   },
   'wedding.jpg': {
     fontFile: fonts.gabriela.white28,
