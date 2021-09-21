@@ -3,6 +3,7 @@ import random from 'random'
 import { promisify } from 'util'
 import { tychei } from 'seedrandom'
 import { getRandomOrgInt } from './randomOrg'
+import { getFilenames } from './getFilenames'
 
 function makeid(length: number) {
   var result = []
@@ -38,20 +39,4 @@ export function getRandomInt(theNumber: number) {
   const rng = tychei(makeid(200))
   random.use(rng)
   return random.int(0, theNumber - 1)
-}
-
-async function getFilenames(directory: string): Promise<string[]> {
-  return new Promise((res, rej) => {
-    fs.readdir(directory, function (err, files) {
-      if (err) {
-        rej('Unable to scan directory: ' + err)
-        console.log('=== err', err)
-      }
-      const fileNames: string[] = []
-      files.forEach(function (file) {
-        fileNames.push(file)
-      })
-      res(fileNames)
-    })
-  })
 }

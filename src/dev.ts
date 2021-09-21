@@ -11,6 +11,7 @@ import {
   imageHandler as twitterImageHandler,
 } from './twitter'
 import { handler as instagramHandler } from './instagram'
+import { intakeImages } from './intakeImages'
 
 const thingsToDo = {
   sentence: async function () {
@@ -42,6 +43,9 @@ const thingsToDo = {
   },
   sendToInstagram: async () => {
     await instagramHandler()
+  },
+  intakeImages: async () => {
+    await intakeImages()
   },
 }
 
