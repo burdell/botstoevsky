@@ -29,3 +29,28 @@ export const patrickHand = {
   white28: 'fontFiles/patrickHand/white-28.fnt',
   black28: 'fontFiles/patrickHand/black-28.fnt',
 }
+
+export const bonitto = {
+  white28: 'fontFiles/bonitto/white-28.fnt',
+  black28: 'fontFiles/bonitto/black-28.fnt',
+}
+
+export const dancingScript = {
+  white28: 'fontFiles/dancingScript/white-28.fnt',
+  black28: 'fontFiles/dancingScript/black-28.fnt',
+}
+
+export const calligraffiti = {
+  white28: 'fontFiles/calligraffiti/white-28.fnt',
+  black28: 'fontFiles/calligraffiti/black-28.fnt',
+}
+
+export const olivetta = {
+  white28: 'fontFiles/olivetta/white-28.fnt',
+  black28: 'fontFiles/olivetta/black-28.fnt',
+}
+
+export const rocksalt = {
+  white28: 'fontFiles/rocksalt/white-28.fnt',
+  black28: 'fontFiles/rocksalt/black-28.fnt',
+}
