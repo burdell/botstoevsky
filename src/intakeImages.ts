@@ -4,8 +4,10 @@ import * as fs from 'fs'
 import { getFilenames } from './getFilenames'
 
 export async function intakeImages() {
+  // const intakePath = path.resolve('./intake')
+  // const resultPath = path.resolve('./src/images/backgrounds')
   const intakePath = path.resolve('./intake')
-  const resultPath = path.resolve('./src/images/backgrounds')
+  const resultPath = path.resolve('./src/tswift/images')
   const images = await getFilenames(intakePath)
 
   let index = 0
