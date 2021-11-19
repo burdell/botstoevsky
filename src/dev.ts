@@ -4,14 +4,15 @@ import { config } from 'dotenv'
 
 config()
 
-import { getRandomSentence } from './getRandomSentence'
-import { getRandomImage } from './getRandomImage'
+import { getRussianLitSentence } from './getRussianLitSentence'
+import { getRussianLitImage } from './getRussianLitImage'
 import {
   textHandler as twitterTextHandler,
   imageHandler as twitterImageHandler,
 } from './twitter'
 import { handler as instagramHandler } from './instagram'
 import { intakeImages } from './intakeImages'
+import { dangerTaylor } from './tswift'
 
 const thingsToDo = {
   sentence: async function () {
@@ -20,7 +21,7 @@ const thingsToDo = {
       fileName = `${fileName}.txt`
     }
 
-    const sentence = await getRandomSentence(fileName)
+    const sentence = await getRussianLitSentence(fileName)
     console.log('=== From: ', sentence.meta?.title)
     console.log(sentence.sentence)
   },
@@ -30,7 +31,7 @@ const thingsToDo = {
       fileName = `${fileName}.jpg`
     }
 
-    const imageResult = await getRandomImage({ backgroundToUse: fileName })
+    const imageResult = await getRussianLitImage({ backgroundToUse: fileName })
     imageResult.imageOptions.image.write(
       resolve(__dirname, './instagram/result.jpg')
     )
@@ -46,6 +47,17 @@ const thingsToDo = {
   },
   intakeImages: async () => {
     await intakeImages()
+  },
+  tswift: async () => {
+    let fileIndex = argv[3] || undefined
+    let fileName: string | undefined
+    if (fileIndex) {
+      fileName = `taylor-${fileIndex}.jpg`
+    }
+    const imageResult = await dangerTaylor(fileName)
+    imageResult.background.image.write(
+      resolve(__dirname, './tswift/result.jpg')
+    )
   },
 }
 

@@ -1,22 +1,6 @@
 import * as fonts from '../fonts'
 
-export type BackgroundConfig = {
-  fontFile: string
-  textPlacement: {
-    x: number
-    y: number
-  }
-  maxWidth: number
-}
-
-export const defaultConfig: BackgroundConfig = {
-  textPlacement: {
-    x: 100,
-    y: 200,
-  },
-  fontFile: fonts.nawabiat.white,
-  maxWidth: 500,
-}
+import { BackgroundConfig } from '../imageUtils'
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
   'balloons.jpg': {

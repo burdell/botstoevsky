@@ -1,8 +1,4 @@
-export type TextMetadata =
-  | {
-      title: string
-    }
-  | undefined
+import { TextMetadata } from '../sentenceUtils'
 
 export const textMetadata: { [filename: string]: TextMetadata } = {
   'bobok.txt': {

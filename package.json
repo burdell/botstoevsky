@@ -20,7 +20,8 @@
     "profile": "ts-node --files ./src/dev.ts profile",
     "dev": "ts-node --files ./src/dev.ts",
     "clean": "node -e \"require('fs-extra').emptyDir('dist');\"",
-    "intake": "ts-node --files ./src/dev.ts intakeImages"
+    "intake": "ts-node --files ./src/dev.ts intakeImages",
+    "tswift": "ts-node --files ./src/dev.ts tswift"
   },
   "prettier": {
     "semi": false,

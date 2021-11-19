@@ -1,12 +1,12 @@
 import Twitter from 'twitter'
 
-import { getRandomSentence } from '../getRandomSentence'
-import { TextMetadata } from '../getRandomSentence/meta'
-import { getRandomImage } from '../getRandomImage'
-import { getImageBuffer } from '../images'
+import { getRussianLitSentence } from '../getRussianLitSentence'
+import { TextMetadata } from '../sentenceUtils'
+import { getRussianLitImage } from '../getRussianLitImage'
+import { getImageBuffer } from '../imageUtils'
 
 export async function textHandler() {
-  const { sentence } = await getRandomSentence()
+  const { sentence } = await getRussianLitSentence()
   await sendTweet({ status: sentence })
 
   return {
@@ -34,8 +34,8 @@ function getTwitterClient() {
 }
 
 export async function sendMediaTweet() {
-  const sentence = await getRandomSentence()
-  const imageResult = await getRandomImage({ sentenceToUse: sentence })
+  const sentence = await getRussianLitSentence()
+  const imageResult = await getRussianLitImage({ sentenceToUse: sentence })
   const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
 
   const client = getTwitterClient()

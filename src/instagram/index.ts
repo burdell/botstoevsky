@@ -1,16 +1,18 @@
 import { IgApiClient } from 'instagram-private-api'
 
-import { getRandomImage } from '../getRandomImage'
-import { getImageBuffer } from '../images'
-import { TextMetadata } from '../getRandomSentence/meta'
+import { getRussianLitImage } from '../getRussianLitImage'
+import { getImageBuffer } from '../imageUtils'
+import { TextMetadata } from '../sentenceUtils'
 
 export async function handler() {
   try {
-    await createImageAndPost()
+    const imageResult = await getRussianLitImage()
+    const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
+    await uploadPhoto(imageBuffer, imageResult.text.meta)
   } catch (e) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: e.message }),
+      body: JSON.stringify({ error: (e as any).message }),
     }
   }
 
@@ -18,12 +20,6 @@ export async function handler() {
     statusCode: 200,
     body: JSON.stringify({}),
   }
-}
-
-async function createImageAndPost() {
-  const imageResult = await getRandomImage()
-  const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
-  await uploadPhoto(imageBuffer, imageResult.text.meta)
 }
 
 function getCredentials() {
