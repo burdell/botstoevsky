@@ -1,6 +1,4 @@
-import * as fs from 'fs'
 import random from 'random'
-import { promisify } from 'util'
 import { tychei } from 'seedrandom'
 import { getRandomOrgInt } from './randomOrg'
 import { getFilenames } from './getFilenames'

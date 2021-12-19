@@ -54,3 +54,13 @@ export const rocksalt = {
   white28: 'fontFiles/rocksalt/white-28.fnt',
   black28: 'fontFiles/rocksalt/black-28.fnt',
 }
+
+export const caferus = {
+  white28: 'fontFiles/caferus/white-28.fnt',
+  black28: 'fontFiles/caferus/black-28.fnt',
+}
+
+export const avocado = {
+  white28: 'fontFiles/avocado/white-28.fnt',
+  black28: 'fontFiles/avocado/black-28.fnt',
+}
