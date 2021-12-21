@@ -507,6 +507,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 550,
   },
+  'wedding.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 340,
+  },
   'wedding2.jpg': {
     fontFile: fonts.patrickHand.white28,
     textPlacement: {
