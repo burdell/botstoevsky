@@ -19,6 +19,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 650,
   },
+  'beach.jpg': {
+    fontFile: fonts.avocado.white28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 650,
+  },
+  'beach2.jpg': {
+    fontFile: fonts.nawabiat.white,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 350,
+  },
   'beach9.jpg': {
     fontFile: fonts.patrickHand.black28,
     textPlacement: {
@@ -42,22 +58,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 30,
     },
     maxWidth: 650,
-  },
-  'boat.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 300,
-  },
-  'bridge.jpg': {
-    fontFile: fonts.patrickHand.white28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 430,
   },
   'campfire2.jpg': {
     fontFile: fonts.patrickHand.white28,
@@ -131,24 +131,16 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 350,
   },
-  'dinner.jpg': {
-    fontFile: fonts.patrickHand.white28,
-    textPlacement: {
-      x: 80,
-      y: 80,
-    },
-    maxWidth: 600,
-  },
-  'dive.jpg': {
-    fontFile: fonts.avocado.white28,
-    textPlacement: {
-      x: 490,
-      y: 150,
-    },
-    maxWidth: 350,
-  },
   'face.jpg': {
     fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 400,
+  },
+  'face2.jpg': {
+    fontFile: fonts.gabriela.white28,
     textPlacement: {
       x: 10,
       y: 10,
@@ -171,14 +163,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 500,
   },
-  'fire.jpg': {
-    fontFile: fonts.nawabiat.white,
-    textPlacement: {
-      x: 50,
-      y: 50,
-    },
-    maxWidth: 650,
-  },
   'flip2.jpg': {
     fontFile: fonts.patrickHand.black28,
     textPlacement: {
@@ -186,6 +170,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 40,
     },
     maxWidth: 650,
+  },
+  'glasses.jpg': {
+    fontFile: fonts.miniStory.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 400,
   },
   'float.jpg': {
     fontFile: fonts.avocado.white28,
@@ -203,14 +195,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 700,
   },
-  'group.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 50,
-      y: 150,
-    },
-    maxWidth: 700,
-  },
   'hair.jpg': {
     fontFile: fonts.patrickHand.black28,
     textPlacement: {
@@ -219,21 +203,13 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 280,
   },
-  'hands.jpg': {
-    fontFile: fonts.patrickHand.black28,
+  'hat.jpg': {
+    fontFile: fonts.avocado.white28,
     textPlacement: {
       x: 10,
       y: 10,
     },
-    maxWidth: 400,
-  },
-  'handstand.jpg': {
-    fontFile: fonts.jost.white28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 325,
+    maxWidth: 350,
   },
   'helmet.jpg': {
     fontFile: fonts.jost.white28,
@@ -259,22 +235,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 410,
   },
-  'hug.jpg': {
-    fontFile: fonts.patrickHand.black28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 350,
-  },
-  'jack-daniels.jpg': {
-    fontFile: fonts.gabriela.black28,
-    textPlacement: {
-      x: 50,
-      y: 50,
-    },
-    maxWidth: 500,
-  },
   'jump2.jpg': {
     fontFile: fonts.patrickHand.black28,
     textPlacement: {
@@ -283,22 +243,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 600,
   },
-  'jump3.jpg': {
-    fontFile: fonts.nawabiat.black,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 380,
-  },
-  'jump8.jpg': {
-    fontFile: fonts.patrickHand.white28,
-    textPlacement: {
-      x: 350,
-      y: 20,
-    },
-    maxWidth: 450,
-  },
   'light.jpg': {
     fontFile: fonts.nawabiat.white,
     textPlacement: {
@@ -306,22 +250,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 50,
     },
     maxWidth: 500,
-  },
-  'lights.jpg': {
-    fontFile: fonts.nawabiat.white,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 300,
-  },
-  'look2.jpg': {
-    fontFile: fonts.jost.white28,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 480,
   },
   'mountains.jpg': {
     fontFile: fonts.miniStory.black28,
@@ -371,14 +299,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
-  'pool.jpg': {
-    fontFile: fonts.gabriela.black28,
-    textPlacement: {
-      x: 20,
-      y: 20,
-    },
-    maxWidth: 450,
-  },
   'purple.jpg': {
     fontFile: fonts.gabriela.black28,
     textPlacement: {
@@ -402,14 +322,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 10,
     },
     maxWidth: 400,
-  },
-  'redhair.jpg': {
-    fontFile: fonts.jost.white28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 350,
   },
   'rocks.jpg': {
     fontFile: fonts.patrickHand.black28,
@@ -451,14 +363,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 330,
   },
-  'skateboard.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 480,
-      y: 50,
-    },
-    maxWidth: 350,
-  },
   'skateboard2.jpg': {
     fontFile: fonts.avocado.black28,
     textPlacement: {
@@ -477,14 +381,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   },
   'sky3.jpg': {
     fontFile: fonts.patrickHand.black28,
-    textPlacement: {
-      x: 50,
-      y: 50,
-    },
-    maxWidth: 600,
-  },
-  'sky4.jpg': {
-    fontFile: fonts.patrickHand.white28,
     textPlacement: {
       x: 50,
       y: 50,
@@ -523,30 +419,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
-  'stars3.jpg': {
-    fontFile: fonts.patrickHand.white28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 400,
-  },
-  'street2.jpg': {
-    fontFile: fonts.jost.white28,
-    textPlacement: {
-      x: 10,
-      y: 150,
-    },
-    maxWidth: 380,
-  },
-  'stereo.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 350,
-      y: 10,
-    },
-    maxWidth: 500,
-  },
   'swim.jpg': {
     fontFile: fonts.patrickHand.white28,
     textPlacement: {
@@ -554,14 +426,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 30,
     },
     maxWidth: 475,
-  },
-  'swim2.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 10,
-      y: 10,
-    },
-    maxWidth: 380,
   },
   'swing.jpg': {
     fontFile: fonts.patrickHand.black28,
@@ -627,14 +491,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 300,
   },
-  'wedding3.jpg': {
-    fontFile: fonts.patrickHand.black28,
-    textPlacement: {
-      x: 30,
-      y: 30,
-    },
-    maxWidth: 600,
-  },
   'whiskey.jpg': {
     fontFile: fonts.gabriela.white28,
     textPlacement: {
@@ -659,13 +515,5 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 75,
     },
     maxWidth: 300,
-  },
-  'yellow.jpg': {
-    fontFile: fonts.jost.black28,
-    textPlacement: {
-      x: 80,
-      y: 80,
-    },
-    maxWidth: 600,
   },
 }
