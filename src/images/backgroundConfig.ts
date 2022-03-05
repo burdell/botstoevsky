@@ -3,6 +3,14 @@ import * as fonts from '../fonts'
 import { BackgroundConfig } from '../imageUtils'
 
 export const backgroundConfig: Record<string, BackgroundConfig> = {
+  'airpod.jpg': {
+    fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 500,
+      y: 10,
+    },
+    maxWidth: 350,
+  },
   'back.jpg': {
     fontFile: fonts.gabriela.black28,
     textPlacement: {
@@ -50,6 +58,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 240,
     },
     maxWidth: 450,
+  },
+  'bed2.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 500,
   },
   'bench2.jpg': {
     fontFile: fonts.avocado.black28,
@@ -267,6 +283,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 410,
   },
+  'jump.jpg': {
+    fontFile: fonts.avocado.black28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 300,
+  },
   'lights.jpg': {
     fontFile: fonts.nawabiat.white,
     textPlacement: {
@@ -306,6 +330,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 30,
     },
     maxWidth: 350,
+  },
+  'ocean.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 20,
+      y: 20,
+    },
+    maxWidth: 550,
   },
   'pink.jpg': {
     fontFile: fonts.jost.white28,
@@ -378,6 +410,22 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 40,
     },
     maxWidth: 330,
+  },
+  'seat.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 600,
+  },
+  'seat2.jpg': {
+    fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 350,
+      y: 10,
+    },
+    maxWidth: 500,
   },
   'shadow.jpg': {
     fontFile: fonts.jost.black28,
@@ -518,10 +566,10 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
   'wedding.jpg': {
     fontFile: fonts.gabriela.black28,
     textPlacement: {
-      x: 10,
-      y: 10,
+      x: 50,
+      y: 50,
     },
-    maxWidth: 340,
+    maxWidth: 400,
   },
   'wedding2.jpg': {
     fontFile: fonts.patrickHand.white28,
@@ -569,6 +617,6 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       x: 600,
       y: 10,
     },
-    maxWidth: 300,
+    maxWidth: 275,
   },
 }
