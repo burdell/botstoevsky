@@ -19,7 +19,7 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       ScheduleExpression: cron(0 18,6 * * ? *)
-      State: 'ENABLED'
+      State: 'DISABLED'
       Targets:
         - Arn:
             Fn::GetAtt:
@@ -57,7 +57,7 @@ Resources:
   ImageTweetEvent:
     Type: AWS::Events::Rule
     Properties:
-      ScheduleExpression: cron(0 12,0 * * ? *)
+      ScheduleExpression: cron(0 0/6 * * ? *)
       State: 'ENABLED'
       Targets:
         - Arn:

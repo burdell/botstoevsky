@@ -24,6 +24,16 @@ export async function getRandomFilename(directoryPath: string) {
   }
 }
 
+export async function getRandomObjectKey(object: Record<string, unknown>) {
+  const keys = Object.keys(object)
+
+  if (process.env.USE_LOCAL_RANDOM) {
+    return getRandomItem(keys)
+  } else {
+    return getRandomOrgItem(keys)
+  }
+}
+
 export function getRandomItem<T>(items: T[]) {
   return items[getRandomInt(items.length)]
 }

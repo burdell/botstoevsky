@@ -1,7 +1,7 @@
 import * as path from 'path'
 import Jimp from 'jimp'
 
-import { getRandomFilename } from '../random'
+import { getRandomFilename, getRandomObjectKey } from '../random'
 import * as fonts from '../fonts'
 
 export type BackgroundConfig = {
@@ -32,7 +32,7 @@ export async function getBackground({
   backgroundConfig: Record<string, BackgroundConfig>
 }) {
   const filename =
-    backgroundToUse || (await getRandomFilename(pathToBackgrounds))
+    backgroundToUse || (await getRandomObjectKey(backgroundConfig))
 
   const config = backgroundConfig[filename] || defaultConfig
   const image = await Jimp.read(`${pathToBackgrounds}/${filename}`)
