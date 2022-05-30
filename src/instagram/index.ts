@@ -10,6 +10,7 @@ export async function handler() {
     const imageBuffer = await getImageBuffer(imageResult.imageOptions.image)
     await uploadPhoto(imageBuffer, imageResult.text.meta)
   } catch (e) {
+    console.log('=== error', e)
     return {
       statusCode: 500,
       body: JSON.stringify({ error: (e as any).message }),
