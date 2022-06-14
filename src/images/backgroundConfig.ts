@@ -171,6 +171,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 400,
   },
+  'canoe2.jpg': {
+    fontFile: fonts.patrickHand.white28,
+    textPlacement: {
+      x: 40,
+      y: 350,
+    },
+    maxWidth: 600,
+  },
   'chair.jpg': {
     fontFile: fonts.jost.black28,
     textPlacement: {
@@ -195,6 +203,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 350,
   },
+  'coffee.jpg': {
+    fontFile: fonts.gabriela.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 350,
+  },
   'colors.jpg': {
     fontFile: fonts.jost.black28,
     textPlacement: {
@@ -210,6 +226,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 40,
     },
     maxWidth: 350,
+  },
+  'dance.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 370,
+      y: 40,
+    },
+    maxWidth: 400,
   },
   'dark.jpg': {
     fontFile: fonts.jost.white28,
@@ -248,6 +272,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     textPlacement: {
       x: 20,
       y: 20,
+    },
+    maxWidth: 550,
+  },
+  'dress.jpg': {
+    fontFile: fonts.gabriela.black28,
+    textPlacement: {
+      x: 80,
+      y: 80,
     },
     maxWidth: 550,
   },
@@ -458,6 +490,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 20,
     },
     maxWidth: 410,
+  },
+  'holding_hands2.jpg': {
+    fontFile: fonts.avocado.black28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 370,
   },
   'jump.jpg': {
     fontFile: fonts.avocado.black28,
@@ -707,6 +747,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 350,
   },
+  'read2.jpg': {
+    fontFile: fonts.avocado.black28,
+    textPlacement: {
+      x: 50,
+      y: 50,
+    },
+    maxWidth: 550,
+  },
   'red.jpg': {
     fontFile: fonts.avocado.black28,
     textPlacement: {
@@ -714,6 +762,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 10,
     },
     maxWidth: 400,
+  },
+  'rock.jpg': {
+    fontFile: fonts.patrickHand.white28,
+    textPlacement: {
+      x: 450,
+      y: 100,
+    },
+    maxWidth: 350,
   },
   'rocks.jpg': {
     fontFile: fonts.patrickHand.black28,
@@ -923,6 +979,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
     },
     maxWidth: 320,
   },
+  'tile.jpg': {
+    fontFile: fonts.jost.black28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 650,
+  },
   'torch.jpg': {
     fontFile: fonts.jost.white28,
     textPlacement: {
@@ -1090,6 +1154,14 @@ export const backgroundConfig: Record<string, BackgroundConfig> = {
       y: 75,
     },
     maxWidth: 300,
+  },
+  'wood2.jpg': {
+    fontFile: fonts.jost.white28,
+    textPlacement: {
+      x: 10,
+      y: 10,
+    },
+    maxWidth: 400,
   },
   'yellow.jpg': {
     fontFile: fonts.avocado.white28,
