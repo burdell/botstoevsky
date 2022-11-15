@@ -12,7 +12,6 @@ import {
 } from './twitter'
 import { handler as instagramHandler } from './instagram'
 import { intakeImages } from './intakeImages'
-import { dangerTaylor } from './tswift'
 
 const thingsToDo = {
   sentence: async function () {
@@ -47,17 +46,6 @@ const thingsToDo = {
   },
   intakeImages: async () => {
     await intakeImages()
-  },
-  tswift: async () => {
-    let fileIndex = argv[3] || undefined
-    let fileName: string | undefined
-    if (fileIndex) {
-      fileName = `taylor-${fileIndex}.jpg`
-    }
-    const imageResult = await dangerTaylor(fileName)
-    imageResult.background.image.write(
-      resolve(__dirname, './tswift/result.jpg')
-    )
   },
 }
 
