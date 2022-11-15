@@ -34,9 +34,9 @@ export const textMetadata: { [filename: string]: TextMetadata } = {
   'notes_from_under.txt': {
     title: 'Notes from Underground',
   },
-  'peasant.txt': {
-    title: 'The Peasant Marey',
-  },
+  // 'peasant.txt': {
+  //   title: 'The Peasant Marey',
+  // },
   'poor_folk.txt': {
     title: 'Poor Folk',
   },
